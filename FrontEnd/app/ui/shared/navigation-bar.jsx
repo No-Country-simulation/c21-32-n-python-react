@@ -11,7 +11,7 @@ export default function NavigationBar() {
         width={207}
         height={50}
       />
-      <div className="flex gap-10 mr-40">
+      <div className="flex gap-10 mr-2">
         <Link href="/register">
           <p className="font-semibold text-base">Registro</p>
         </Link>
@@ -27,7 +27,14 @@ export default function NavigationBar() {
         <Link href="/contact">
           <p className="font-semibold text-base">Contacto</p>
         </Link>
+
       </div>
+      <Link href="/login">
+        <button href="/login" className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+              Ingresar
+        </button>
+      </Link>
+      
     </div>
   );
 }
