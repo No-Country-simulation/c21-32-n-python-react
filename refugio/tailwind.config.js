@@ -7,7 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        bgButton: "#24AFB5",
+      },
     },
   },
   plugins: [],
