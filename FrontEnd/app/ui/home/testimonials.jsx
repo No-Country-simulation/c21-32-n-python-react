@@ -12,7 +12,7 @@ export default function Testimonials() {
           height={96}
           width={96}
         />
-        <p className="w-[720px] text-center">
+        <p className="w-[720px] text-center text-grayText">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic culpa,
           officia quia fugit consequuntur atque molestias excepturi harum ea
         </p>

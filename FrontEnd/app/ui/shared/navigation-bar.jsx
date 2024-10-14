@@ -27,14 +27,15 @@ export default function NavigationBar() {
         <Link href="/contact">
           <p className="font-semibold text-base">Contacto</p>
         </Link>
-
       </div>
       <Link href="/login">
-        <button href="/login" className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
-              Ingresar
+        <button
+          href="/login"
+          className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg"
+        >
+          Ingresar
         </button>
       </Link>
-      
     </div>
   );
 }
