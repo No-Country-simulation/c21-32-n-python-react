@@ -29,11 +29,10 @@ class Role(models.Model):
 class AccountManager(BaseUserManager):
     def create_user(self, email, password=None):
         """
-        Creates and saves a User with the given email, date of
-        birth and password.
+        Crea y guarda usuarios que tenga un correo,  una fecha de cumpleaños y una contraseña.
         """
         if not email:
-            raise ValueError('Users must have an email address')
+            raise ValueError('El usuario debe tener un correo')
 
         user = self.model(
             email=self.normalize_email(email),
@@ -45,8 +44,7 @@ class AccountManager(BaseUserManager):
 
     def create_superuser(self, email, password=None):
         """
-        Creates and saves a superuser with the given email, date of
-        birth and password.
+        Crea y guarda superusuarios con un correo y una contraseña.
         """
         user = self.create_user(
             email,
@@ -64,7 +62,7 @@ class Account(AbstractBaseUser):
         unique=True,
     )
     type = models.ManyToManyField(Role,default=[1])
-    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Numero de telefono: '+999999999999999'.")
     mobile_number = models.CharField(validators=[phone_regex], max_length=17, blank=False,null = False) 
 
     user_registered_on = models.DateTimeField(default=timezone.now, blank=True)
@@ -83,19 +81,19 @@ class Account(AbstractBaseUser):
         return self.email
 
     def has_perm(self, perm, obj=None):
-        "Does the user have a specific permission?"
-        # Simplest possible answer: Yes, always
+        "El usuario tiene un permsio en especifico?"
+        # true or false
         return True
 
     def has_module_perms(self, app_label):
-        "Does the user have permissions to view the app `app_label`?"
-        # Simplest possible answer: Yes, always
+        "El usuario puede acceder a una aplicacion en especifica?"
+        # True or false
         return True
 
     @property
     def is_staff(self):
-        "Is the user a member of staff?"
-        # Simplest possible answer: All admins are staff
+        "El usuario hace parte de los administradores??"
+        # Todos los administradores son parte del "Staff"
         return self.is_admin
 
     def verify_user_type(self,type):
