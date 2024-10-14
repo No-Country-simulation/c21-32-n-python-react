@@ -10,15 +10,19 @@ import Footbar from "./ui/shared/footbar";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       <NavigationBar />
-      <Welcome />
-      <Testimonials />
-      <Highlighted />
-      {/*
-      <LatestRescues />
-      <About />
-      <Help />
+      <div className="divide-y divide-solid divide-grayText/20">
+        <Welcome />
+        <Testimonials />
+        <Highlighted />
+        <LatestRescues />
+        <About />
+        <Help />
+      </div>
+      {/*   
+     
+      
       <Contact />
       <Footbar /> */}
     </div>
