@@ -1,5 +1,5 @@
 import NavigationBar from "../ui/shared/navigation-bar";
-import Banner from "./pet/banner";
+import Banner from "./banner";
 import CardList from "./cardList";
 
 export default function AdoptionPage() {
@@ -9,7 +9,7 @@ export default function AdoptionPage() {
                 <NavigationBar />
                 <Banner />
             </div>
-            <div className="container mx-auto p-6">
+            <div className="container mx-auto p-6 pt-20">
                 <CardList />
             </div>
         </div>
