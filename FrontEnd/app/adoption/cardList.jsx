@@ -1,8 +1,8 @@
 // components/CardList.js
 import Card from "./card";
 
-const CardList = () => {
-    const cardsData = [
+const CardList = ({ searchQuery, filterValue, currentPage, cardsPerPage }) => {
+    const allCards = [
         {
             id: "1",
             imageSrc: "/images/no-image.jpg",
@@ -68,19 +68,24 @@ const CardList = () => {
         },
     ];
 
+
+    // Filtra las tarjetas según el valor de búsqueda y filtro
+    const filteredCards = allCards.filter(card => {
+        const matchesSearch = card.title.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesFilter = filterValue ? card.type === filterValue : true;
+        return matchesSearch && matchesFilter;
+    });
+
+    // Paginación
+    const startIndex = (currentPage - 1) * cardsPerPage;
+    const paginatedCards = filteredCards.slice(startIndex, startIndex + cardsPerPage);
+
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {cardsData.map((card) => (
-        <Card className="w-full"
-          key={card.id}
-          id={card.id} // Asegúrate de pasar el id aquí
-          imageSrc={card.imageSrc}
-          date={card.date}
-          title={card.title}
-          description={card.description}
-        />
-      ))}
-    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {paginatedCards.map(card => (
+                <Card key={card.id} {...card} />
+            ))}
+        </div>
     );
 };
 

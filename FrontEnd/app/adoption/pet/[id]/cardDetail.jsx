@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const CardDetail = ({ imageSrc, date, title, description }) => {
     return (
-        <div className="flex">
+        <div className="flex justify-around pt-12 ">
             <div className="relative w-1/2 h-64">
                 <Image
                     src={imageSrc}
