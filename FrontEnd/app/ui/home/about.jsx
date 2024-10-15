@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="h-[900px] w-full">
+    <section id="about-us" className="h-[900px] w-full">
       <div className="flex flex-col items-center justify-center w-[730px] h-full mx-auto">
         <p className="font-bold text-5xl mb-7">NOSOTROS</p>
         <p className="font-normal text-xl text-grayText text-center mb-4">

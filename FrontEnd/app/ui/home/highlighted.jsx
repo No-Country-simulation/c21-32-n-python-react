@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Highlighted() {
@@ -34,9 +35,12 @@ export default function Highlighted() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit
           </p>
           <div className="flex justify-center">
-            <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
-              Adoptar
-            </button>
+            {/* TODO: recibir id para el detalle*/}
+            <Link href="/adoption/pet/1">
+              <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+                Adoptar
+              </button>
+            </Link>
           </div>
         </div>
         <Image

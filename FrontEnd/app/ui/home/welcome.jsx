@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Welcome() {
@@ -10,12 +11,16 @@ export default function Welcome() {
             ¿Buscas un perro o un gato?
           </h1>
           <div className="flex justify-around">
-            <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
-              Adoptar
-            </button>
-            <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
-              Registrar
-            </button>
+            <Link href="adoption">
+              <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+                Adoptar
+              </button>
+            </Link>
+            <Link href="/register">
+              <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+                Registrar
+              </button>
+            </Link>
           </div>
         </div>
         <Image

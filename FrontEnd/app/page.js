@@ -3,10 +3,11 @@ import Testimonials from "./ui/home/testimonials";
 import Highlighted from "./ui/home/highlighted";
 import LatestRescues from "./ui/home/latest-rescues";
 import About from "./ui/home/about";
-import Help from "./ui/home/help";
+import Help from "./ui/home/help-us";
 import Contact from "./ui/home/contact";
 import NavigationBar from "./ui/shared/navigation-bar";
 import Footbar from "./ui/shared/footbar";
+import HelpUs from "./ui/home/help-us";
 
 export default function Home() {
   return (
@@ -18,13 +19,10 @@ export default function Home() {
         <Highlighted />
         <LatestRescues />
         <About />
-        <Help />
+        <HelpUs />
+        <Contact />
+        <Footbar />
       </div>
-      {/*   
-     
-      
-      <Contact />
-      <Footbar /> */}
     </div>
   );
 }
