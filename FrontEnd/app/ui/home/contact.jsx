@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import MapLocation from "./map-location";
 
 export default function Contact() {
   const info = [
@@ -12,13 +13,14 @@ export default function Contact() {
     <section id="contact" className="h-[613px] w-full">
       <h1 className="font-bold text-4xl text-center mt-8">CONTACTO</h1>
       <div className="flex justify-between items-center">
-        <Image
+        {/* <Image
           className="max-h-[275px] min-h-[275px]"
           alt="mapa"
           width={275}
           height={275}
           src="/images/rectangle.png"
-        />
+        /> */}
+        <MapLocation />
         <div>
           {info.map((value, i) => {
             return <IconText key={i} {...value} />;
