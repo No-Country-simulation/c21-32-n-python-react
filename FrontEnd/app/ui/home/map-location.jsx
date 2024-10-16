@@ -7,7 +7,7 @@ export default function MapLocation() {
       height="275"
       style={{ border: 0 }}
       loading="lazy"
-      allowFullscreen
+      allowFullScreen
       src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJw9QPPGJxVo8R4t89L2PCQto&key=AIzaSyDa8pwqo3RODxPYWFyRBE5UHz7NpBeQ8O0"
     ></iframe>
   );
