@@ -1,7 +1,7 @@
-export default function RegisterForm() {
+
+
+export default function RegisterForm(props) {
   return (
-    <div>
-      <p>Register page</p>
-    </div>
+              <div></div>
   );
 }

@@ -2,23 +2,23 @@ import React from "react";
 
 export default function LoginPage() {
   return (
-      <div className="w-full h-full divide-x divide-black">
+      <div className="w-full bg-[#d9d9d9] h-full divide-x divide-black">
         <div className="flex justify-between h-full ">
-            <div className="mt-20 sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
               <img
                 alt="Dog"
-                src="/images/dog.png"
-                className="mx-auto h-50 w-auto"
+                src="/images/logo.jpg"
+                className="rounded-[100px] bg-transparent ml-10 mt-[13em]"
               />
             </div>
-              <hr className="w-1 h-[100vh] bg-black border-1"/>
+              <hr className="w-[2px] h-[100vh] bg-black border-[1px]"/>
             <div className="mt-20 sm:mx-auto sm:w-full sm:max-w-sm">
             <h2 className="mt-5 text-left text-2xl font-bold leading-9 tracking-tight text-[#0e4a67]">
                 Login
               </h2>
               <p className="mb-5 text-left text-sm text-gray-500">
               ¿No tienes cuenta?{' '}
-                <a href="#" className="font-semibold leading-6 text-[#fd8d53] hover:text-[#faa16e]">
+                <a href="register" className="font-semibold leading-6 text-[#fd8d53] hover:text-[#faa16e]">
                   Crea una ahora
                 </a>
               </p>
@@ -60,7 +60,7 @@ export default function LoginPage() {
                 <div>
                   <button
                     type="submit"       
-                    className="flex w-full justify-center rounded-md bg-[#fe8e4b] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5]"
+                    className="flex w-full justify-center rounded-md bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5]"
                   >
                     Sign in
                   </button>
