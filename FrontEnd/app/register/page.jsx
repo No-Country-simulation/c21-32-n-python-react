@@ -2,15 +2,18 @@ import React from "react";
 
 export default function register() {
   return (
-    <div className="w-full bg-[#d9d9d9] h-full divide-x divide-black">
+    <div className="w-full bg-[#d9d9d9] h-[1245px]">
       <div className="flex justify-between h-full ">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img alt="Cat" src="/images/cat.jpeg" className="size-full" />
+        <div className="w-1/2">
+          <img
+            alt="Cat"
+            src="/images/cat.jpeg"
+            className="rounded-e-2xl h-full"
+          />
         </div>
-        <hr className="w-[2px] h-[130vh] bg-black border-[1px]" />
         <div className="mt-20 sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-5 text-left text-2xl font-bold leading-9 tracking-tight text-[#0e4a67]">
-            Register
+            Crea tu cuenta
           </h2>
           <p className="mb-5 text-left text-sm text-gray-500">
             ¿Ya tienes cuenta?{" "}
