@@ -25,10 +25,10 @@ export default function NavigationBar() {
         <Link href="/donations">
           <p className="font-semibold text-base">Donaciones</p>
         </Link>
-        <Link href="#about-us">
+        <Link href="/#about-us">
           <p className="font-semibold text-base">Nosotros</p>
         </Link>
-        <Link href="#contact">
+        <Link href="/#contact">
           <p className="font-semibold text-base">Contacto</p>
         </Link>
       </div>
