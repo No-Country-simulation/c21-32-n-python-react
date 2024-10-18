@@ -1,2 +1,6 @@
 //FUNCIONES ESPECIFICAS PARA LOGIN
-//Ej. "logIn", "getUserbyEmail"...
+import { signIn } from "@/auth";
+
+export const credentialsAction = (formData) => {
+  signIn("credentials", formData);
+};

@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import signOutNav from "./signOutNav";
 
 export default function NavigationBar() {
   return (
@@ -38,6 +40,7 @@ export default function NavigationBar() {
           Ingresar
         </button>
       </Link>
+      <button onClick={() => signOutNav()}>Sign Out</button>
     </div>
   );
 }
