@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { josefinaSans } from "./ui/shared/fonts";
-
+import { SessionProvider } from "next-auth/react";
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${josefinaSans.className} antialiased`}>
-        {children}
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   );
