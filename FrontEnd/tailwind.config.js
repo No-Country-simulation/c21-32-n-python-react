@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgButton: "#24AFB5",
+        bgButton: "#F46036",
         grayText: "#545454",
       },
     },
