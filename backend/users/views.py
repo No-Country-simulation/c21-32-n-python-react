@@ -19,7 +19,11 @@ class UserViewSet(viewsets.ModelViewSet):
         
         #Verifica si el email ya esta en uso
         if Account.objects.filter(email=request.data['email']).exists():
-            return Response({'error': 'Email already exists'}, status=status.HTTP_400_BAD_REQUEST)        
+            return Response({'error': 'Email already exists'}, status=status.HTTP_400_BAD_REQUEST) 
+        
+        #Verifiica si el username ya esta en uso
+        if Account.objects.filter(username=request.data['username']).exists():
+            return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
         
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)

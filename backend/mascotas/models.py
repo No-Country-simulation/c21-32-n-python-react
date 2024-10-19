@@ -22,3 +22,4 @@ class Mascota(models.Model):
     #permite guardar dependiendo del id y el nombre de la nueva mascota 
     def __str__(self):
         return f"Mascota {self.id_mascota}: {self.nombre}"
+    

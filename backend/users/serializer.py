@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from django.contrib.auth.models import Group
 from users.models import Account
 from django.contrib.auth import authenticate
 
@@ -9,12 +8,13 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Account
-        fields = ('email', 'password', 'is_active', 'is_admin')
+        fields = ('email', 'password', 'is_active', 'is_admin', 'username')
 
     def create(self, validated_data):
         """Crea un nuevo usuario con el password encriptado"""
         user = Account(
             email=validated_data['email'],
+            username=validated_data['username'],
             is_active=validated_data.get('is_active', True),
             is_admin=validated_data.get('is_admin', False),
         )
