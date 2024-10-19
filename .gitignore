@@ -1,5 +1,5 @@
 # Python
-__pycache__/
+*/__pycache__/
 *.py[cod]
 *$py.class
 .env
@@ -14,8 +14,8 @@ db.sqlite3
 media/
 
 # Virtual Environment
-env/
 venv/
+env/
 ENV/
 
 # IDEs
