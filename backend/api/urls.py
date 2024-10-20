@@ -6,6 +6,7 @@ urlpatterns = [
     # Url para acceder a la api de users
     path('v1/', include('users.urls')),
     path('v1/', include('mascotas.urls')),
+    path('v1/', include('refugio.urls')),
     path('docs/', include_docs_urls(title='Context Capture API')),
     # Para obtener el token de acceso y refresco
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
