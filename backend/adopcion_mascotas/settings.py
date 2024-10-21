@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'api',
     'mascotas',
     'adopcion',
+    'refugio',
 ]
 
 MIDDLEWARE = [

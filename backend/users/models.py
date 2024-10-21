@@ -56,6 +56,11 @@ class AccountManager(BaseUserManager):
 
 
 class Account(AbstractBaseUser):
+    
+    id= models.AutoField(primary_key=True)
+    username = models.CharField(max_length=25, blank=True, null=True)
+    name = models.CharField(max_length=25, blank=True, null=True)
+    lastname = models.CharField(max_length=25, blank=True, null=True)
     email = models.EmailField(
         verbose_name='email address',
         max_length=255,
@@ -78,7 +83,7 @@ class Account(AbstractBaseUser):
     USERNAME_FIELD = 'email'
 
     def __str__(self):
-        return self.email
+        return f"{self.email} ({self.username})"
 
     def has_perm(self, perm, obj=None):
         "El usuario tiene un permsio en especifico?"
