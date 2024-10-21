@@ -1,13 +1,13 @@
 from rest_framework import viewsets
 from users.models import Account
 from .serializer import UserSerializer, LoginUserSerializer
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import status
 from rest_framework.response import Response
 from django.utils import timezone
 from rest_framework.exceptions import ValidationError
 from rest_framework_simplejwt.tokens import RefreshToken
-
+from rest_framework.views import APIView
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -59,4 +59,15 @@ class LoginUserViewSet(viewsets.ModelViewSet):
         except Exception as e:
             # Maneja otros errores genéricos
             return Response({'error': 'An unexpected error occurred.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class UserProfileView(APIView):
+    queryset = Account.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]  # Requiere autenticación
+
+    def get(self, request):
+        user = request.user  # Usuario autenticado
+        serializer = self.serializer_class(user)
+        return Response(serializer.data)
             

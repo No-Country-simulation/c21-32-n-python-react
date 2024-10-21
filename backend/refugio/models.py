@@ -5,7 +5,6 @@ from django.db import models
 
 class Refugio(models.Model):
     
-    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50, null=True, blank=False)
     dirlogo = models.CharField(max_length=50)
     Horario_atencion = models.TimeField(max_length=50, null=True, blank=False)

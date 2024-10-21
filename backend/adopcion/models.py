@@ -7,11 +7,10 @@ from refugio.models import Refugio
 class Adopcion(models.Model):
     id_adopcion = models.AutoField(primary_key=True)
     id_mascota = models.ForeignKey(Mascota,on_delete=models.CASCADE,null=True,blank=True)
-    id_refugio = models.IntegerField() #FALTA FK
     estatus = models.CharField(max_length=50)
     fecha = models.DateField()
     
-     #falta aplicar FK 
+    #falta aplicar FK 
     id_refugio = models.ForeignKey(
         Refugio,
         on_delete=models.CASCADE,
