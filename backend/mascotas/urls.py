@@ -9,5 +9,14 @@ router.register(r'mascotas', views.MascotaView, basename='mascotas')
 
 # Definir las rutas de la API
 urlpatterns = [
-    path("pets/", include(router.urls)),  # Agregar la barra inclinada al final
+    path("pets/", include(router.urls)),  
+    # Agregar la barra inclinada al final
 ]
+
+
+
+
+
+
+
+
