@@ -1,4 +1,6 @@
 from django.db import models
+from refugio.models import Refugio
+
 # Create your models here.
 #Esta clase lleva el nombre de la tabla 
 #vamos a heredar la clase models
@@ -16,7 +18,8 @@ class Mascota(models.Model):
     destacada = models.CharField(max_length=45)
     
     #falta aplicar FK 
-    id_refugio = models.IntegerField(null=True, blank=True)  # Sin clave foránea
+    id_refugio = models.ForeignKey(Refugio, on_delete=models.CASCADE)
+    
     
     #permite guardar dependiendo del id y el nombre de la nueva mascota 
     def __str__(self):
