@@ -7,9 +7,10 @@ export default function About() {
       <div className="flex flex-col items-center justify-center w-[730px] h-full mx-auto">
         <p className="font-bold text-5xl mb-7">NOSOTROS</p>
         <p className="font-normal text-xl text-grayText text-center mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non
-          maxime error ipsa ut ipsum inventore, obcaecati vel magnam a
-          repellendus maiores fugiat fuga? Placeat error quibusdam doloremque
+        ¡Bienvenidos a Buscando huellitas, tu recurso integral para la adopción de mascotas! 
+        En nuestra plataforma, nos dedicamos a conectar mascotas en busca de un hogar amoroso con personas responsables
+         y cariñosas dispuestas a brindarles una segunda oportunidad. 
+         Creemos firmemente que cada mascota merece una vida llena de amor, cuidado y respeto, y trabajamos incansablemente para hacer de este ideal una realidad.
         </p>
         <div className="flex justify-around w-full gap-x-2 mb-7">
           <Avatar />

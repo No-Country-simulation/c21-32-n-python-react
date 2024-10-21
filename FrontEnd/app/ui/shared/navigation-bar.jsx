@@ -11,10 +11,10 @@ export default function NavigationBar() {
     <div className="flex items-center justify-between h-20 max-w-full bg-[#2684FF47]">
       <Link href="/">
         <Image
-          className="max-h-14 min-w-[207px] ml-20"
+          className="max-h-15 min-w-[60px] ml-20"
           alt="Logo del refugio"
-          src="/images/rectangle.png"
-          width={207}
+          src="/images/logo.jpg"
+          width={60}
           height={50}
         />
       </Link>

@@ -5,7 +5,7 @@ export default function LatestRescues() {
   const lastestRescues = [
     {
       id: "1",
-      imageSrc: "/images/no-image.jpg",
+      imageSrc: "/images/cat.jpeg",
       date: "01 de enero de 2023",
       title: "Título de la Tarjeta 1",
       description: "Descripción breve de la tarjeta 1.",
@@ -13,7 +13,7 @@ export default function LatestRescues() {
     },
     {
       id: "2",
-      imageSrc: "/images/no-image.jpg",
+      imageSrc: "/images/cat2.jpeg",
       date: "02 de febrero de 2023",
       title: "Título de la Tarjeta 2",
       description: "Descripción breve de la tarjeta 2.",
@@ -21,7 +21,7 @@ export default function LatestRescues() {
     },
     {
       id: "3",
-      imageSrc: "/images/no-image.jpg",
+      imageSrc: "/images/cat3.jpeg",
       date: "03 de marzo de 2023",
       title: "Título de la Tarjeta 3",
       description: "Descripción breve de la tarjeta 3.",
@@ -29,7 +29,7 @@ export default function LatestRescues() {
     },
     {
       id: "4",
-      imageSrc: "/images/no-image.jpg",
+      imageSrc: "/images/dog.jpeg",
       date: "04 de abril de 2023",
       title: "Título de la Tarjeta 4",
       description: "Descripción breve de la tarjeta 4.",
