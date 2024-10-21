@@ -17,6 +17,8 @@ class Mascota(models.Model):
     img_print_mascota4 = models.ImageField(max_length=100)
     estatus = models.CharField(max_length=45)
     destacada = models.CharField(max_length=45)
+    
+    #falta aplicar FK 
     id_refugio = models.IntegerField(null=True, blank=True)  # Sin clave foránea
     
     #permite guardar dependiendo del id y el nombre de la nueva mascota 
