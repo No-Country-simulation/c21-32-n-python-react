@@ -6,10 +6,12 @@ from django.db import models
 class Refugio(models.Model):
     
     name = models.CharField(max_length=50, null=True, blank=False)
-    dirlogo = models.CharField(max_length=50)
+    dirlogo = models.ImageField(max_length=100)    
     Horario_atencion = models.TimeField(max_length=50, null=True, blank=False)
     direccion = models.CharField(max_length=50, null=True, blank=False)
     telefono = models.CharField(max_length=50, null=True, blank=False)
+    coordy = models.IntegerField()
+    coordx = models.IntegerField()
     mision = models.TextField(max_length=100)
     vision = models.TextField(max_length=100)
     
