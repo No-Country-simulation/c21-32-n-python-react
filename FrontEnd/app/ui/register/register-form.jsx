@@ -3,6 +3,7 @@ import { registerAction } from "@/app/lib/register/actions";
 import clsx from "clsx";
 import { redirect } from "next/navigation";
 import { useState, useTransition } from "react";
+import { v4 as uuid } from "uuid";
 
 export default function RegisterForm() {
   const [isPending, startRegister] = useTransition();
@@ -13,7 +14,7 @@ export default function RegisterForm() {
       const responseAction = await registerAction(formData);
       setRegisterResponse(responseAction);
       if (responseAction.status === 201) {
-        redirect("/adoptions");
+        redirect(`/login/success/${uuid()}`);
       }
     });
   };
