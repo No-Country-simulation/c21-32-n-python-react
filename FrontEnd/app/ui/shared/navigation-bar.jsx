@@ -34,6 +34,12 @@ export default function NavigationBar() {
         <Link href="/#contact">
           <p className="font-semibold text-base">Contacto</p>
         </Link>
+        <Link href="/admin/dashboard">
+          <p className="font-semibold text-base">Solicitudes</p>
+        </Link>
+        <Link href="/users/pets">
+          <p className="font-semibold text-base">Mascotas</p>
+        </Link>
       </div>
       {status === "authenticated" ? (
         <button className="mr-4" onClick={() => signOutNav()}>
