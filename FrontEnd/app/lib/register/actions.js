@@ -23,7 +23,7 @@ export const registerAction = async (formData) => {
           },
         }
       );
-      console.log(response);
+      //console.log(response);
       return { status: response.status, message: response.statusText };
     }
     //console.log(validation.error.flatten());
