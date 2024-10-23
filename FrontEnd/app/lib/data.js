@@ -38,3 +38,42 @@ export async function fetchRequestsFiltered(query, currentPage) {
     return { requests, totalPages };
   } catch (error) {}
 }
+
+export const getTokenFromDb = async (email, pwHash) => {
+  try {
+    const response = await fetch("http://127.0.0.1:8000/api/v1/user/login/", {
+      method: "POST",
+      body: JSON.stringify({ email: email, password: pwHash }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const jsonResponse = await response.json();
+
+    if (jsonResponse.detail) return null;
+    //console.log(jsonResponse);
+    return jsonResponse;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+export const getUserFromDb = async (token) => {
+  try {
+    const response = await fetch("http://127.0.0.1:8000/api/v1/user/profile/", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const jsonResponse = await response.json();
+    //if (jsonResponse.detail) return null;
+    //console.log(jsonResponse);
+    return jsonResponse;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};

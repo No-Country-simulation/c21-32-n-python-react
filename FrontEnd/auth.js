@@ -1,26 +1,32 @@
 import NextAuth from "next-auth";
+
 import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
-import { signInSchema } from "./app/lib/login/schema";
-
-const getUserFromDb = async () => {
-  try {
-    const User = {
-      name: "Rassiel",
-      email: "rassiel@email.com",
-      password: "123456",
-    };
-    return User;
-  } catch (error) {}
-};
+import { getTokenFromDb, getUserFromDb } from "./app/lib/data";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   pages: {
     signIn: "/login",
   },
   callbacks: {
+    jwt({ token, user }) {
+      if (user) {
+        token.role = user.role;
+        token.accessToken = user.access;
+        token.refreshToken = user.refresh;
+      }
+      return token;
+    },
+    session({ session, token }) {
+      session.user.role = token.role;
+      session.user.accessToken = token.accessToken;
+      session.user.refreshToken = token.refreshToken;
+      return session;
+    },
     authorized: async ({ auth, request }) => {
       const isLoggedIn = !!auth?.user;
+
+      //console.log("auth: ", auth);
 
       const isOnAdoptionPage = request.nextUrl.pathname.startsWith("/adoption");
       const isOnLogin = request.nextUrl.pathname.startsWith("/login");
@@ -45,28 +51,30 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         email: {},
         password: {},
       },
-      authorize: async (credentials) => {
-        let user = null;
+      authorize: async ({ email, password }) => {
+        try {
+          let user = null;
+          //TODO: logic to salt and hash password
+          //const pwHash = saltAndHashPassword(password);
+          const pwHash = password;
 
-        const { email, password } = await signInSchema.parseAsync(credentials);
+          // logic to verify if the user exists
 
-        //TODO: logic to salt and hash password
-        //const pwHash = saltAndHashPassword(password);
-        const pwHash = password;
-
-        // logic to verify if the user exists
-        user = await getUserFromDb(email, pwHash);
-
-        if (!user) {
-          // No user found, so this is their first attempt to login
-          // meaning this is also the place you could do registration
-          throw new Error("User not found.");
+          const token = await getTokenFromDb(email, pwHash);
+          if (!token) throw new Error("Credenciales invalidas");
+          //console.log("token from :", token);
+          user = await getUserFromDb(token.access);
+          if (!user) throw new Error("Data base Error");
+          //console.log("User from db: ", user);
+          user = {
+            ...user,
+            ...token,
+          };
+          //console.log("User with token: ", user);
+          return user;
+        } catch (error) {
+          return null;
         }
-
-        console.log("Auth success!");
-        // return user object with their profile data
-
-        return user;
       },
     }),
     Google,
