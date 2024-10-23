@@ -10,8 +10,8 @@ class Refugio(models.Model):
     Horario_atencion = models.TimeField(max_length=50, null=True, blank=False)
     direccion = models.CharField(max_length=50, null=True, blank=False)
     telefono = models.CharField(max_length=50, null=True, blank=False)
-    coordy = models.IntegerField()
-    coordx = models.IntegerField()
+    coordy = models.IntegerField(default=0)
+    coordx = models.IntegerField(default=0)
     mision = models.TextField(max_length=100)
     vision = models.TextField(max_length=100)
     
