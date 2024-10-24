@@ -39,3 +39,11 @@ class Mascota(models.Model):
     def __str__(self):
         return f"Mascota {self.id_mascota}: {self.nombre}"
     
+class ImagenesMascota(models.Model):
+    title = models.CharField(max_length=100)
+    img_mascota = models.ImageField(max_length=100)
+    id_mascota = models.ForeignKey(Mascota, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f"Imagen de {self.id_mascota}: {self.title}"
+    
