@@ -1,6 +1,7 @@
 "use server";
 import { signIn } from "@/auth";
 import { signInSchema } from "./schema";
+import { CredentialsSignin } from "next-auth";
 
 export const validateSignInForm = async (formData) => {
   const dataEntries = Object.fromEntries(formData);
@@ -13,5 +14,12 @@ export const validateSignInForm = async (formData) => {
 };
 
 export const credentialsAction = async (formData) => {
-  await signIn("credentials", formData);
+  try {
+    await signIn("credentials", formData);
+  } catch (error) {
+    return {
+      success: false,
+      errors: { signIn: "Credenciales invalidas" },
+    };
+  }
 };

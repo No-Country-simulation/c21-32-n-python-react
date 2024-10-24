@@ -1,19 +1,21 @@
 "use client";
 import { credentialsAction, validateSignInForm } from "@/app/lib/login/actions";
+import { CredentialsSignin } from "next-auth";
 import { useState } from "react";
 
 export default function LoginForm() {
   const [submitErrors, setSubmitErrors] = useState(null);
 
   const signInAction = async (formData) => {
-    const isValidated = await validateSignInForm(formData);
-
-    if (isValidated.success) {
-      await credentialsAction(formData);
-    }
+    const validationResponse = await validateSignInForm(formData);
     //console.log(isValidated);
-    setSubmitErrors(isValidated.errors);
-    console.log(submitErrors);
+    setSubmitErrors(validationResponse);
+    if (validationResponse.success) {
+      const siginResponse = await credentialsAction(formData);
+      if (!siginResponse.success) {
+        setSubmitErrors(siginResponse);
+      }
+    }
   };
 
   return (
@@ -39,8 +41,10 @@ export default function LoginForm() {
             autoComplete="email"
             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#207198] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#24AFB5] sm:text-sm sm:leading-6"
           />
-          {submitErrors?.email && (
-            <span className="text-sm text-red-800">{submitErrors.email}</span>
+          {submitErrors?.errors?.email && (
+            <span className="text-sm text-red-800">
+              {submitErrors.errors.email}
+            </span>
           )}
         </div>
       </div>
@@ -64,8 +68,10 @@ export default function LoginForm() {
             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#207198] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#24AFB5] sm:text-sm sm:leading-6"
           />
         </div>
-        {submitErrors?.password && (
-          <span className="text-sm text-red-800">{submitErrors.password}</span>
+        {submitErrors?.errors?.password && (
+          <span className="text-sm text-red-800">
+            {submitErrors.errors.password}
+          </span>
         )}
       </div>
 
@@ -77,6 +83,11 @@ export default function LoginForm() {
           Sign in
         </button>
       </div>
+      {submitErrors?.errors?.signIn && (
+        <span className="text-sm text-red-800">
+          {submitErrors.errors.signIn}
+        </span>
+      )}
       <div className="text-sm">
         <a
           href="#"
