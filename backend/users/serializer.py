@@ -8,7 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Account
-        fields = ('email', 'password', 'username', 'name', 'lastname')
+        fields = ('email', 'password', 'username', 'name', 'lastname', 'is_admin')
 
     def create(self, validated_data):
         """Crea un nuevo usuario con el password encriptado"""
