@@ -1,9 +1,9 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import CardDetail from "./cardDetail"; // Asegúrar de que la ruta sea correcta
+import CardDetail from "../../../ui/adoption/pet/cardDetail"; // Asegúrar de que la ruta sea correcta
 import NavigationBar from "../../../ui/shared/navigation-bar";
-import ImageGallery from "./ImageGallery";
+import ImageGallery from "../../../ui/adoption/pet/ImageGallery";
 
 export default function CardDetailPage() {
   const { id } = useParams(); // Obtiene el ID de la URL
