@@ -1,5 +1,5 @@
+import NavigationBar from "@/app/ui/shared/navigation-bar";
 import Image from "next/image";
-import NavigationBar from "../ui/shared/navigation-bar";
 
 export default function DonationsPage() {
   return (
