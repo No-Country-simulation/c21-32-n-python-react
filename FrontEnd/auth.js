@@ -11,14 +11,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     jwt({ token, user }) {
       if (user) {
-        token.role = user.role;
+        token.isAdmin = user.is_admin;
         token.accessToken = user.access;
         token.refreshToken = user.refresh;
       }
       return token;
     },
     session({ session, token }) {
-      session.user.role = token.role;
+      session.user.isAdmin = token.isAdmin;
       session.user.accessToken = token.accessToken;
       session.user.refreshToken = token.refreshToken;
       return session;
