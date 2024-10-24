@@ -24,24 +24,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       return session;
     },
     authorized: async ({ auth, request }) => {
-      const isLoggedIn = !!auth?.user;
-
-      //console.log("auth: ", auth);
-
-      const isOnAdoptionPage = request.nextUrl.pathname.startsWith("/adoption");
-      const isOnLogin = request.nextUrl.pathname.startsWith("/login");
-
-      if (isOnAdoptionPage) {
-        if (isLoggedIn) return true;
-        return false;
-      } else if (isOnLogin) {
-        if (isLoggedIn) {
-          const newUrl = new URL("/adoption", request.nextUrl.origin);
-          return Response.redirect(newUrl);
-        }
-        return false;
-      }
-
+      const { pathname } = request.nextUrl;
+      if (pathname === "/adoption") return !!auth;
       return true;
     },
   },

@@ -1,6 +1,5 @@
 "use client";
 import { credentialsAction, validateSignInForm } from "@/app/lib/login/actions";
-import { CredentialsSignin } from "next-auth";
 import { useState } from "react";
 
 export default function LoginForm() {
@@ -12,7 +11,7 @@ export default function LoginForm() {
     setSubmitErrors(validationResponse);
     if (validationResponse.success) {
       const siginResponse = await credentialsAction(formData);
-      if (!siginResponse.success) {
+      if (!siginResponse?.success) {
         setSubmitErrors(siginResponse);
       }
     }
