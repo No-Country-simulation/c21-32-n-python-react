@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { josefinaSans } from "./ui/shared/fonts";
+import { josefinaSans } from "./fonts/fonts";
 import { SessionProvider } from "next-auth/react";
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
