@@ -14,7 +14,7 @@ export default function RegisterForm() {
       const responseAction = await registerAction(formData);
       setRegisterResponse(responseAction);
       if (responseAction.status === 201) {
-        redirect(`/login/success/${uuid()}`);
+        redirect(`/register/success/${uuid()}`);
       }
     });
   };

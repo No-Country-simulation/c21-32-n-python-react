@@ -14,7 +14,7 @@ export const registerAction = async (formData) => {
         is_admin: false,
       };
       const response = await fetch(
-        "http://127.0.0.1:8000/api/v1/email/register/",
+        "http://127.0.0.1:8000/api/v1/user/register/",
         {
           method: "POST",
           body: JSON.stringify(newUser),
