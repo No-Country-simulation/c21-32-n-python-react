@@ -1,11 +1,11 @@
 "use client";
-import Banner from "../ui/adoption/banner";
-import CardList from "../ui/adoption/cardList";
-import Filter from "../ui/adoption/Filter";
-import Pagination from "../ui/adoption/Pagination";
-import SearchBar from "../ui/adoption/SearchBar";
-import NavigationBar from "../ui/shared/navigation-bar";
 
+import Banner from "@/app/ui/adoption/banner";
+import CardList from "@/app/ui/adoption/cardList";
+import Filter from "@/app/ui/adoption/Filter";
+import Pagination from "@/app/ui/adoption/Pagination";
+import SearchBar from "@/app/ui/adoption/SearchBar";
+import NavigationBar from "@/app/ui/shared/navigation-bar";
 import { useState } from "react";
 
 export default function AdoptionPage() {

@@ -1,14 +1,15 @@
-import React from "react";
-import LoginForm from "../ui/login/login-form";
+import Image from "next/image";
+import LoginForm from "@/app/ui/login/login-form";
 
 export default function LoginPage() {
   return (
     <div className="w-full bg-[#d9d9d9] h-full divide-x divide-black">
       <div className="flex justify-between h-full ">
         <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
+          <Image
             alt="Dog"
             src="/images/logo.jpg"
+            fill
             className="rounded-[100px] bg-transparent ml-10 mt-[13em]"
           />
         </div>
@@ -35,9 +36,10 @@ export default function LoginPage() {
           >
             <button type="submit">Signin with Google</button>
           </form> */}
-          <img
+          <Image
             alt="Dog"
             src="/images/cat.png"
+            fill
             className="absolute bottom-0 left-[78%] h-[300px]"
           />
         </div>

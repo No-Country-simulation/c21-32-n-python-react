@@ -1,6 +1,5 @@
 import Image from "next/image";
-import React from "react";
-import RegisterForm from "../ui/register/register-form";
+import RegisterForm from "@/app/ui/register/register-form";
 
 export default function register() {
   return (
