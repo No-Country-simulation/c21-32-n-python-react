@@ -1,23 +1,25 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
 import signOutNav from "./signOutNav";
+import { auth } from "@/auth";
 
-export default function NavigationBar() {
-  const { status } = useSession();
+export default async function NavigationBar() {
+  //const { data: session } = useSession();
+  const session = await auth();
 
   return (
     <div className="flex items-center justify-between h-20 max-w-full bg-[#2684FF47]">
-      <Link href="/">
-        <Image
-          className="max-h-14 min-w-[207px] ml-20"
-          alt="Logo del refugio"
-          src="/images/rectangle.png"
-          width={207}
-          height={50}
-        />
-      </Link>
+      <div className="h-full ml-2">
+        <Link href="/">
+          <Image
+            className="max-w-[141px] h-full rounded-[100px]"
+            alt="Logo del refugio"
+            src="/images/logo.jpg"
+            width={207}
+            height={50}
+          />
+        </Link>
+      </div>
       <div className="flex gap-10 mr-2">
         <Link href="/register">
           <p className="font-semibold text-base">Registro</p>
@@ -41,8 +43,8 @@ export default function NavigationBar() {
           <p className="font-semibold text-base">Mascotas</p>
         </Link>
       </div>
-      {status === "authenticated" ? (
-        <button className="mr-4" onClick={() => signOutNav()}>
+      {session?.user ? (
+        <button className="mr-4" onClick={signOutNav}>
           Sign Out
         </button>
       ) : (
