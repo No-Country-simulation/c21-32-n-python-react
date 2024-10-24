@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "@/app/adoption/card";
+import Card from "../adoption/card";
 
 export default function LatestRescues() {
   const lastestRescues = [

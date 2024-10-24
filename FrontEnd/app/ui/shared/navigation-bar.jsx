@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import signOutNav from "./signOutNav";
 import { auth } from "@/auth";
+import signOutNav from "./signOutNav";
 
 export default async function NavigationBar() {
   //const { data: session } = useSession();
@@ -44,9 +44,9 @@ export default async function NavigationBar() {
         </Link>
       </div>
       {session?.user ? (
-        <button className="mr-4" onClick={signOutNav}>
-          Sign Out
-        </button>
+        <form action={signOutNav}>
+          <button className="mr-4">Sign Out</button>
+        </form>
       ) : (
         <Link href="/login">
           <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg mr-4">

@@ -1,4 +1,4 @@
-import NextAuth from "next-auth";
+import NextAuth, { CredentialsSignin } from "next-auth";
 
 import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
@@ -62,7 +62,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
           const token = await getTokenFromDb(email, pwHash);
           if (!token) throw new Error("Credenciales invalidas");
-          //console.log("token from :", token);
+          //console.log("token from db:", token);
+
           user = await getUserFromDb(token.access);
           if (!user) throw new Error("Data base Error");
           //console.log("User from db: ", user);

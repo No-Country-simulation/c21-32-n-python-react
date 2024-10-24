@@ -51,10 +51,10 @@ export const getTokenFromDb = async (email, pwHash) => {
     const jsonResponse = await response.json();
 
     if (jsonResponse.detail) return null;
-    //console.log(jsonResponse);
+    //console.log("response getting token: ", jsonResponse);
     return jsonResponse;
   } catch (error) {
-    console.log(error);
+    //console.log("Error getting Token: ", error);
     return null;
   }
 };
@@ -69,11 +69,11 @@ export const getUserFromDb = async (token) => {
       },
     });
     const jsonResponse = await response.json();
-    //if (jsonResponse.detail) return null;
-    //console.log(jsonResponse);
+    if (jsonResponse.detail) return null;
+    //console.log("response getting user: ",jsonResponse);
     return jsonResponse;
   } catch (error) {
-    console.log(error);
+    //console.log("Error getting User: ", error);
     return null;
   }
 };

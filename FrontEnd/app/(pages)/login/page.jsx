@@ -5,12 +5,12 @@ export default function LoginPage() {
   return (
     <div className="w-full bg-[#d9d9d9] h-full divide-x divide-black">
       <div className="flex justify-between h-full ">
-        <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="relative h-40 w-40 sm:mx-auto ml-10 mt-[13em]">
           <Image
             alt="Dog"
             src="/images/logo.jpg"
             fill
-            className="rounded-[100px] bg-transparent ml-10 mt-[13em]"
+            className="rounded-[100px] "
           />
         </div>
         <hr className="w-[2px] h-[100vh] bg-black border-[1px]" />
@@ -36,12 +36,9 @@ export default function LoginPage() {
           >
             <button type="submit">Signin with Google</button>
           </form> */}
-          <Image
-            alt="Dog"
-            src="/images/cat.png"
-            fill
-            className="absolute bottom-0 left-[78%] h-[300px]"
-          />
+          <div className="absolute bottom-0 left-[78%] h-[360px] w-80">
+            <Image alt="Dog" src="/images/cat.png" fill />
+          </div>
         </div>
       </div>
     </div>
