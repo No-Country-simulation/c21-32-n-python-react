@@ -2,14 +2,16 @@ import AdoptionContainer from "@/app/ui/adoption/adoption-container";
 import Banner from "@/app/ui/adoption/banner";
 import NavigationBar from "@/app/ui/shared/navigation-bar";
 
-export default function AdoptionPage() {
+export default async function AdoptionPage() {
+  const data = await fetch("http://127.0.0.1:8000/api/v1/pets/mascotas/");
+  let pets = await data.json();
   return (
     <div>
       <div className="container mx-auto">
         <NavigationBar />
         <Banner />
       </div>
-      <AdoptionContainer />
+      <AdoptionContainer pets={pets} />
     </div>
   );
 }

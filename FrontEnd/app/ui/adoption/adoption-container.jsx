@@ -5,7 +5,7 @@ import Filter from "./Filter";
 import Pagination from "./Pagination";
 import SearchBar from "./SearchBar";
 
-function AdoptionContainer() {
+function AdoptionContainer({ pets }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [filterValue, setFilterValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,6 +35,7 @@ function AdoptionContainer() {
       </div>
       <div className="container mx-auto p-6 pt-20">
         <CardList
+          dataList={pets}
           searchQuery={searchQuery}
           filterValue={filterValue}
           currentPage={currentPage}
