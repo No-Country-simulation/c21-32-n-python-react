@@ -6,6 +6,7 @@ import signOutNav from "./signOutNav";
 export default async function NavigationBar() {
   //const { data: session } = useSession();
   const session = await auth();
+  const isAdmin = session?.user?.isAdmin;
 
   return (
     <div className="flex items-center justify-between h-20 max-w-full bg-[#2684FF47]">
@@ -24,9 +25,11 @@ export default async function NavigationBar() {
         <Link href="/register">
           <p className="font-semibold text-base">Registro</p>
         </Link>
-        <Link href="/adoption">
-          <p className="font-semibold text-base">Adopción</p>
-        </Link>
+        {!isAdmin && (
+          <Link href="/adoption">
+            <p className="font-semibold text-base">Adopción</p>
+          </Link>
+        )}
         <Link href="/donations">
           <p className="font-semibold text-base">Donaciones</p>
         </Link>
@@ -36,9 +39,11 @@ export default async function NavigationBar() {
         <Link href="/#contact">
           <p className="font-semibold text-base">Contacto</p>
         </Link>
-        {/* <Link href="/admin/dashboard">
-          <p className="font-semibold text-base">Solicitudes</p>
-        </Link> */}
+        {isAdmin && (
+          <Link href="/admin/dashboard">
+            <p className="font-semibold text-base">Solicitudes</p>
+          </Link>
+        )}
         {/* <Link href="/users/pets">
           <p className="font-semibold text-base">Mascotas</p>
         </Link> */}

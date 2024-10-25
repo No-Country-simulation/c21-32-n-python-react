@@ -30,7 +30,7 @@ export const credentialsAction = async (formData) => {
       errors: {},
     };
   } finally {
-    if (success) redirect("/adoption");
+    if (success) redirect("/");
     // const session = await auth();
     // if (session?.user) {
     //   if (session?.user?.isAdmin) {
