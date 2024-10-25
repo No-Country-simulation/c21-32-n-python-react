@@ -6,7 +6,7 @@ import Image from "next/image";
 import UsersTable from "./users-table";
 //import { useSearchParams } from "next/navigation";
 
-export default function AdminDashboard({ requests, totalPages }) {
+export default function RequestDashboard({ requests, totalPages }) {
   //const searchParams = useSearchParams();
   //const query = searchParams.get("page");
   const [isRequestsChecked, setIsRequestsChecked] = useState(true);
