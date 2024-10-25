@@ -15,6 +15,7 @@ export const validateSignInForm = async (formData) => {
 };
 
 export const credentialsAction = async (formData) => {
+  let success = false;
   try {
     await signIn("credentials", formData);
   } catch (error) {
@@ -23,17 +24,19 @@ export const credentialsAction = async (formData) => {
         success: false,
         errors: { signIn: "Credenciales invalidas" },
       };
+    success = true;
     return {
       success: true,
       errors: {},
     };
   } finally {
-    const session = await auth();
-    if (session?.user) {
-      if (session?.user?.isAdmin) {
-        redirect("http://127.0.0.1:8000/admin/login/");
-      }
-      redirect("/adoption");
-    }
+    if (success) redirect("/adoption");
+    // const session = await auth();
+    // if (session?.user) {
+    //   if (session?.user?.isAdmin) {
+    //     redirect("http://127.0.0.1:8000/admin/login/");
+    //   }
+    //   redirect("/adoption");
+    // }
   }
 };

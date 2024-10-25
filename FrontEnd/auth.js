@@ -25,7 +25,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     authorized: async ({ auth, request }) => {
       const { pathname } = request.nextUrl;
-      if (pathname === "/adoption") return !!auth;
+      if (pathname.startsWith("/adoption")) return !!auth;
       return true;
     },
   },
