@@ -1,14 +1,15 @@
 from rest_framework import viewsets
 from users.models import Account
 from .serializer import UserSerializer, LoginUserSerializer
-from rest_framework.permissions import AllowAny
+
+from rest_framework.permissions import AllowAny, IsAuthenticated
+
 from rest_framework import status
 from rest_framework.response import Response
 from django.utils import timezone
 from rest_framework.exceptions import ValidationError
 from rest_framework_simplejwt.tokens import RefreshToken
-
-
+from rest_framework.views import APIView
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = Account.objects.all()
@@ -19,7 +20,12 @@ class UserViewSet(viewsets.ModelViewSet):
         
         #Verifica si el email ya esta en uso
         if Account.objects.filter(email=request.data['email']).exists():
-            return Response({'error': 'Email already exists'}, status=status.HTTP_400_BAD_REQUEST)        
+
+            return Response({'error': 'Email already exists'}, status=status.HTTP_400_BAD_REQUEST) 
+        
+        #Verifiica si el username ya esta en uso
+        if Account.objects.filter(username=request.data['username']).exists():
+            return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
         
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -55,4 +61,15 @@ class LoginUserViewSet(viewsets.ModelViewSet):
         except Exception as e:
             # Maneja otros errores genéricos
             return Response({'error': 'An unexpected error occurred.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class UserProfileView(APIView):
+    queryset = Account.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]  # Requiere autenticación
+
+    def get(self, request):
+        user = request.user  # Usuario autenticado
+        serializer = self.serializer_class(user)
+        return Response(serializer.data)
+
             

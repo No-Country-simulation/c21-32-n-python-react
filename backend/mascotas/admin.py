@@ -1,7 +1,9 @@
 from django.contrib import admin
-from .models import Account
+from .models import Mascota
 # Register your models here.
 
 
-admin.site.register(Account)
+#CACHE
+admin.site.register(Mascota)
+
 
