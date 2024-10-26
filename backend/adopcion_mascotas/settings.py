@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+
 import os
 
 from pathlib import Path
@@ -139,6 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # manually Added 
 CORS_ALLOWED_ORIGINS = ["http://localhost:8000", "http://localhost:3000"]
+
 AUTH_USER_MODEL = 'users.Account'
 CORS_ALLOW_CREDENTIALS = True
 
@@ -164,7 +166,6 @@ SIMPLE_JWT = {
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
-
 #manejo de subida de imagenes al local
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
