@@ -22,7 +22,7 @@ export const validateRefugeSubmit = async (formData) => {
   const validation = refugeCreateSchema.safeParse(dataEntries);
 
   if (!validation.success) {
-    console.log(validation.error.flatten().fieldErrors);
+    //console.log(validation.error.flatten().fieldErrors);
     return { success: false, errors: validation.error.flatten().fieldErrors };
   }
   //console.log("Validation success");

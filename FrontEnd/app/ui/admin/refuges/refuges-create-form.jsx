@@ -12,6 +12,7 @@ export default function RefugesCreateForm() {
 
   const submitRefuge = async (formData) => {
     const submitValidation = await validateRefugeSubmit(formData);
+    //console.log(submitValidation);
     setSubmitErrors(submitValidation);
     if (submitValidation.success) {
       const createRefuge = await createRefugeAction(formData);
@@ -33,7 +34,9 @@ export default function RefugesCreateForm() {
         <label htmlFor="name">Nombre:</label>
         <input id="name" name="name" className="" />
         {submitErrors?.errors?.name && (
-          <span className="text-sm text-red-600">{submitErrors.name}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.name}
+          </span>
         )}
       </div>
 
@@ -47,7 +50,9 @@ export default function RefugesCreateForm() {
           className=""
         />
         {submitErrors?.errors?.dirlogo && (
-          <span className="text-sm text-red-600">{submitErrors.dirlogo}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.dirlogo}
+          </span>
         )}
       </div>
 
@@ -71,7 +76,9 @@ export default function RefugesCreateForm() {
         <label htmlFor="direccion">Direccion:</label>
         <input id="direccion" name="direccion" className="" />
         {submitErrors?.errors?.direccion && (
-          <span className="text-sm text-red-600">{submitErrors.direccion}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.direccion}
+          </span>
         )}
       </div>
 
@@ -79,7 +86,9 @@ export default function RefugesCreateForm() {
         <label htmlFor="telefono">Telefono:</label>
         <input id="telefono" name="telefono" className="" />
         {submitErrors?.errors?.telefono && (
-          <span className="text-sm text-red-600">{submitErrors.telefono}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.telefono}
+          </span>
         )}
       </div>
 
@@ -87,7 +96,9 @@ export default function RefugesCreateForm() {
         <label htmlFor="coordy">Coordenada y:</label>
         <input type="number" id="coordy" name="coordy" className="" />
         {submitErrors?.errors?.coordy && (
-          <span className="text-sm text-red-600">{submitErrors.coordy}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.coordy}
+          </span>
         )}
       </div>
 
@@ -95,7 +106,9 @@ export default function RefugesCreateForm() {
         <label htmlFor="coordx">Coordenada x:</label>
         <input type="number" id="coordx" name="coordx" className="" />
         {submitErrors?.errors?.coordx && (
-          <span className="text-sm text-red-600">{submitErrors.coordx}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.coordx}
+          </span>
         )}
       </div>
 
@@ -103,14 +116,18 @@ export default function RefugesCreateForm() {
         <label htmlFor="mision">Mision:</label>
         <textarea id="mision" name="mision" className="" />
         {submitErrors?.errors?.mision && (
-          <span className="text-sm text-red-600">{submitErrors.mision}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.mision}
+          </span>
         )}
       </div>
       <div>
         <label htmlFor="vision">Vision:</label>
         <textarea id="vision" name="vision" className="" />
         {submitErrors?.errors?.vision && (
-          <span className="text-sm text-red-600">{submitErrors.vision}</span>
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.vision}
+          </span>
         )}
       </div>
       <button className="bg-green-400">Enviar</button>
