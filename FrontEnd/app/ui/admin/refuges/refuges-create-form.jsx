@@ -1,8 +1,33 @@
-import React from "react";
+"use client";
+
+import {
+  createRefugeAction,
+  validateRefugeSubmit,
+} from "@/app/lib/admin/actions";
+import React, { useRef, useState } from "react";
 
 export default function RefugesCreateForm() {
+  const [submitErrors, setSubmitErrors] = useState(null);
+  const formRef = useRef(null);
+
+  const submitRefuge = async (formData) => {
+    const isSubmitValidated = await validateRefugeSubmit(formData);
+    if (isSubmitValidated.success) {
+      const createRefuge = await createRefugeAction(formData);
+
+      if (createRefuge?.success) {
+        formRef.current?.reset();
+      }
+    }
+  };
+
   return (
-    <form>
+    <form
+      ref={formRef}
+      action={(formData) => {
+        submitRefuge(formData);
+      }}
+    >
       <div>
         <label htmlFor="name">Nombre:</label>
         <input id="name" name="name" className="" />
@@ -10,17 +35,29 @@ export default function RefugesCreateForm() {
 
       <div>
         <label htmlFor="dirlogo">Logo:</label>
-        <input id="dirlogo" name="dirlogo" className="" />
+        <input
+          type="file"
+          accept="image/png, image/jpg, image/jpeg, image/webp"
+          id="dirlogo"
+          name="dirlogo"
+          className=""
+        />
       </div>
 
       <div>
         <label htmlFor="Horario_atencion">Horario_atencion:</label>
-        <input id="Horario_atencion" name="Horario_atencion" className="" />
+        <input
+          id="Horario_atencion"
+          type="time"
+          name="Horario_atencion"
+          step={2}
+          className=""
+        />
       </div>
 
       <div>
         <label htmlFor="direccion">Direccion:</label>
-        <input id="direccion" direccion="name" className="" />
+        <input id="direccion" name="direccion" className="" />
       </div>
 
       <div>
@@ -30,12 +67,12 @@ export default function RefugesCreateForm() {
 
       <div>
         <label htmlFor="coordy">Coordenada y:</label>
-        <input id="coordy" name="coordy" className="" />
+        <input type="number" id="coordy" name="coordy" className="" />
       </div>
 
       <div>
         <label htmlFor="coordx">Coordenada x:</label>
-        <input id="coordx" name="coordx" className="" />
+        <input type="number" id="coordx" name="coordx" className="" />
       </div>
 
       <div>

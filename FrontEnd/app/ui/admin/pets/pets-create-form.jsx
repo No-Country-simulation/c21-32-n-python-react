@@ -52,7 +52,7 @@ function PetsCreateForm({ refuges }) {
         <label htmlFor="img_home_principal">Imagen 1:</label>
         <input
           type="file"
-          accept="image/png, image/jpeg image/jpg"
+          accept="image/png, image/jpeg, image/jpg"
           id="img_home_principal"
           name="img_home_principal"
           className=""
@@ -63,7 +63,7 @@ function PetsCreateForm({ refuges }) {
         <label htmlFor="img_print_mascota">Imagen 2:</label>
         <input
           type="file"
-          accept="image/png, image/jpeg image/jpg"
+          accept="image/png, image/jpeg, image/jpg"
           id="img_print_mascota"
           name="img_print_mascota"
           className=""

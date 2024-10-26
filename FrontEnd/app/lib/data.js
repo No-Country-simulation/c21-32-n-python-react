@@ -77,3 +77,24 @@ export const getUserFromDb = async (token) => {
     return null;
   }
 };
+
+export const createRefuge = async (refuge) => {
+  try {
+    const response = await fetch(
+      "http://127.0.0.1:8000/api/v1/refugio/refugio/",
+      {
+        method: "POST",
+        body: refuge,
+      }
+    );
+    const jsonResponse = await response.json();
+    console.log("response creating refuge: ", jsonResponse);
+    if (jsonResponse.detail) return null;
+    return jsonResponse;
+  } catch (error) {
+    //console.log("Error Creating refuge: ", error);
+    return null;
+  }
+};
+
+export const createPet = async (pet) => {};
