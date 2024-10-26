@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from users.models import Account
 from django.contrib.auth import authenticate
 
@@ -17,6 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
             username=validated_data['username'],
             name=validated_data['name'],
             lastname=validated_data['lastname'],
+
         )
         user.set_password(validated_data['password'])
         user.save()
