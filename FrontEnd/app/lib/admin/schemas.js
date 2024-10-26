@@ -38,11 +38,11 @@ export const refugeCreateSchema = object({
     .max(50, "La direccion debe ser menor a 50 caracteres"),
   telefono: string().min(1).max(20),
   coordy: any().refine(
-    (number) => !parseInt(number),
+    (number) => typeof parseInt(number) === "number",
     "Se necesita un numero valido"
   ),
   coordx: any().refine(
-    (number) => !parseInt(number),
+    (number) => typeof parseInt(number) === "number",
     "Se necesita un numero valido"
   ),
   mision: string({ required_error: "Esta campo no puede estar vacio" })
