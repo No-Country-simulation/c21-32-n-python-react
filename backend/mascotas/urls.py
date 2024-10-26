@@ -14,6 +14,7 @@ router.register(r'images', views.ImageView, basename='Image')
 urlpatterns = [
     path("pets/", include(router.urls)),  
     # Agregar la barra inclinada al final
+    path('pets/search/', views.MascotasList.as_view(), name='user-profile'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
