@@ -22,7 +22,7 @@ export default function LoginForm() {
       action={(formData) => {
         signInAction(formData);
       }}
-      className="space-y-6"
+      className="space-y-6 z-10"
     >
       <div>
         <label
@@ -87,7 +87,7 @@ export default function LoginForm() {
           {submitErrors.errors.signIn}
         </span>
       )}
-      <div className="text-sm">
+      <div className="text-sm sm:mb-8">
         <a
           href="#"
           className="font-semibold text-[#3b83a4] hover:text-[#448aaa]"

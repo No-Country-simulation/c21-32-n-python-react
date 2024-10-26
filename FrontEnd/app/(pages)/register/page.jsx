@@ -3,15 +3,15 @@ import RegisterForm from "@/app/ui/register/register-form";
 
 export default function register() {
   return (
-    <div className="w-full bg-[#d9d9d9] h-[1245px]">
+    <div className="w-full h-screen bg-[#d9d9d9]">
       <div className="flex justify-between h-full ">
-        <div className="w-1/2">
+        <div className="w-1/2 hidden lg:block">
           <Image
             alt="Cat"
-            src="/images/cat.jpeg"
-            className="rounded-e-2xl w-full h-full"
-            height={1245}
-            width={700}
+            src="/images/cat.jpg"
+            className="rounded-e-2xl w-screen h-full"
+            height={89}
+            width={400}
           />
         </div>
         <div className="mt-20 sm:mx-auto sm:w-full sm:max-w-sm">

@@ -13,23 +13,35 @@ export default async function NavigationBar() {
       <div className="h-full ml-2">
         <Link href="/">
           <Image
-            className="max-w-[141px] h-full rounded-[100px]"
+            className="h-full"
             alt="Logo del refugio"
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             width={207}
             height={50}
           />
         </Link>
+        
       </div>
-      <div className="flex gap-10 mr-2">
+      <div className="flex gap-10">
+        <Link href="/">
+        <p className="font-semibold text-base">
+        <Image
+          alt="pets"
+          src="/images/banner1.png"
+          width={200}
+          height={200}/>
+        </p>
+          
+        </Link>
         <Link href="/register">
           <p className="font-semibold text-base">Registro</p>
         </Link>
-        {!isAdmin && (
-          <Link href="/adoption">
+        <Link href="/adoption">
             <p className="font-semibold text-base">Adopción</p>
           </Link>
-        )}
+        {/*!isAdmin && (
+          
+        )*/}
         <Link href="/donations">
           <p className="font-semibold text-base">Donaciones</p>
         </Link>
@@ -39,11 +51,12 @@ export default async function NavigationBar() {
         <Link href="/#contact">
           <p className="font-semibold text-base">Contacto</p>
         </Link>
-        {isAdmin && (
-          <Link href="/admin/dashboard">
+        <Link href="/admin/dashboard">
             <p className="font-semibold text-base">Solicitudes</p>
           </Link>
-        )}
+        {/*isAdmin && (
+          
+        )*/}
         {/* <Link href="/users/pets">
           <p className="font-semibold text-base">Mascotas</p>
         </Link> */}

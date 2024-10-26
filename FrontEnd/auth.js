@@ -24,9 +24,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       return session;
     },
     authorized: async ({ auth, request }) => {
-      const { pathname } = request.nextUrl;
+      /*const { pathname } = request.nextUrl;
       if (pathname.startsWith("/adoption")) return !!auth;
-      if (pathname.startsWith("/admin")) return auth?.user?.isAdmin;
+      if (pathname.startsWith("/admin")) return auth?.user?.isAdmin;*/
       return true;
     },
   },

@@ -126,14 +126,7 @@ export default function RegisterForm() {
       {registerResponse?.status && registerResponse.status !== 201 && (
         <span className="text-xs text-red-800">Usuario existente</span>
       )}
-      <div className="text-sm">
-        <a
-          href="#"
-          className="font-semibold text-[#3b83a4] hover:text-[#448aaa]"
-        >
-          ¿Olvidaste tu contraseña?
-        </a>
-      </div>
+      
     </form>
   );
 }
