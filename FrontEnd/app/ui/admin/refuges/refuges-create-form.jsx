@@ -11,10 +11,11 @@ export default function RefugesCreateForm() {
   const formRef = useRef(null);
 
   const submitRefuge = async (formData) => {
-    const isSubmitValidated = await validateRefugeSubmit(formData);
-    if (isSubmitValidated.success) {
+    const submitValidation = await validateRefugeSubmit(formData);
+    setSubmitErrors(submitValidation);
+    if (submitValidation.success) {
       const createRefuge = await createRefugeAction(formData);
-
+      setSubmitErrors(createRefuge);
       if (createRefuge?.success) {
         formRef.current?.reset();
       }
@@ -31,6 +32,9 @@ export default function RefugesCreateForm() {
       <div>
         <label htmlFor="name">Nombre:</label>
         <input id="name" name="name" className="" />
+        {submitErrors?.errors?.name && (
+          <span className="text-sm text-red-600">{submitErrors.name}</span>
+        )}
       </div>
 
       <div>
@@ -42,6 +46,9 @@ export default function RefugesCreateForm() {
           name="dirlogo"
           className=""
         />
+        {submitErrors?.errors?.dirlogo && (
+          <span className="text-sm text-red-600">{submitErrors.dirlogo}</span>
+        )}
       </div>
 
       <div>
@@ -53,35 +60,58 @@ export default function RefugesCreateForm() {
           step={2}
           className=""
         />
+        {submitErrors?.errors?.Horario_atencion && (
+          <span className="text-sm text-red-600">
+            {submitErrors.Horario_atencion}
+          </span>
+        )}
       </div>
 
       <div>
         <label htmlFor="direccion">Direccion:</label>
         <input id="direccion" name="direccion" className="" />
+        {submitErrors?.errors?.direccion && (
+          <span className="text-sm text-red-600">{submitErrors.direccion}</span>
+        )}
       </div>
 
       <div>
         <label htmlFor="telefono">Telefono:</label>
         <input id="telefono" name="telefono" className="" />
+        {submitErrors?.errors?.telefono && (
+          <span className="text-sm text-red-600">{submitErrors.telefono}</span>
+        )}
       </div>
 
       <div>
         <label htmlFor="coordy">Coordenada y:</label>
         <input type="number" id="coordy" name="coordy" className="" />
+        {submitErrors?.errors?.coordy && (
+          <span className="text-sm text-red-600">{submitErrors.coordy}</span>
+        )}
       </div>
 
       <div>
         <label htmlFor="coordx">Coordenada x:</label>
         <input type="number" id="coordx" name="coordx" className="" />
+        {submitErrors?.errors?.coordx && (
+          <span className="text-sm text-red-600">{submitErrors.coordx}</span>
+        )}
       </div>
 
       <div>
         <label htmlFor="mision">Mision:</label>
         <textarea id="mision" name="mision" className="" />
+        {submitErrors?.errors?.mision && (
+          <span className="text-sm text-red-600">{submitErrors.mision}</span>
+        )}
       </div>
       <div>
         <label htmlFor="vision">Vision:</label>
         <textarea id="vision" name="vision" className="" />
+        {submitErrors?.errors?.vision && (
+          <span className="text-sm text-red-600">{submitErrors.vision}</span>
+        )}
       </div>
       <button className="bg-green-400">Enviar</button>
     </form>
