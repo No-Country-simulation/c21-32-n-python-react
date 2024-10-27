@@ -14,7 +14,7 @@ import { SessionProvider } from "next-auth/react";
 // });
 
 export const metadata = {
-  title: "Mi refugio",
+  title: "Buscando huellas",
   description: "Perritos y gatitos en adopción",
 };
 

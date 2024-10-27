@@ -38,7 +38,7 @@ export default function AdminPagination({ totalPages }) {
               <button
                 onClick={moveToSelectedPage}
                 className={clsx("py-[6x] px-[10px]", {
-                  "bg-violet-500": index === currentPage - 1,
+                  "bg-[#024873] text-white": index === currentPage - 1,
                 })}
                 key={index}
                 id={index + 1}

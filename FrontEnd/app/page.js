@@ -10,8 +10,8 @@ import HelpUs from "./ui/home/help-us";
 
 export default function Home() {
   return (
-    <div className="container mx-auto ">
-      <NavigationBar />
+    <div>
+      <NavigationBar/>
       <div className="divide-y divide-solid divide-grayText/20">
         <Welcome />
         <Testimonials />
