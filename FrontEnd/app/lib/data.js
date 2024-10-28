@@ -87,14 +87,27 @@ export const createRefuge = async (refuge) => {
         body: refuge,
       }
     );
-    const jsonResponse = await response.json();
-    console.log("response creating refuge: ", jsonResponse);
-    if (jsonResponse.detail) return null;
-    return jsonResponse;
+
+    return response;
   } catch (error) {
     //console.log("Error Creating refuge: ", error);
     return null;
   }
 };
 
-export const createPet = async (pet) => {};
+export const createPet = async (pet) => {
+  try {
+    const response = await fetch(
+      "http://127.0.0.1:8000/api/v1/pets/mascotas/",
+      {
+        method: "POST",
+        body: pet,
+      }
+    );
+
+    return response;
+  } catch (error) {
+    //console.log("Error Creating Pet: ", error);
+    return null;
+  }
+};

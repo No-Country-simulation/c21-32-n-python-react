@@ -1,15 +1,44 @@
-import { any, number, object, string } from "zod";
+import { any, boolean, coerce, date, nativeEnum, object, string } from "zod";
 
 /*****************PETS*******************/
 
 export const petCreateSchema = object({
-  email: string({ required_error: "Email es requerido" })
-    .min(1, "Email no puede estar vacio")
-    .email("Email invalido"),
-  password: string({ required_error: "Password es requerido" })
-    .min(1, "El password no puede estar vacio")
-    .min(8, "Password debe tener más de 8 caracteres")
-    .max(32, "Password debe tener menos de 32 caracteres"),
+  nombre: string({ required_error: "Nombre es requerido" })
+    .min(1, "Nombre no puede estar vacio")
+    .max(50, "El nombre debe ser menor a 30 caracteres"),
+  tipo: coerce.number(),
+  descripcion: string({ required_error: "Descripcion es requerido" }).min(
+    1,
+    "Descripcion no puede estar vacio"
+  ),
+  raza: string().max(20),
+  peso: coerce.number().gte(0),
+  edad: any().refine(
+    (number) => typeof parseInt(number) === "number",
+    "Se necesita un numero valido"
+  ),
+  sexo: string().refine((sex) => sex === "M" || sex === "F", "Invalid Option"),
+  img_home_principal: any()
+    .refine((file) => file?.size > 0, "Archivo es requerido")
+    .refine((file) => file?.size <= MAX_FILE_SIZE, `Max image size is 5MB.`)
+    .refine(
+      (file) => ACCEPTED_IMAGE_TYPES.includes(file?.type),
+      "Only .jpg, .jpeg, .png and .webp formats are supported."
+    ),
+  img_print_mascota: any()
+    .refine((file) => file?.size > 0, "Archivo es requerido")
+    .refine((file) => file?.size <= MAX_FILE_SIZE, `Max image size is 5MB.`)
+    .refine(
+      (file) => ACCEPTED_IMAGE_TYPES.includes(file?.type),
+      "Only .jpg, .jpeg, .png and .webp formats are supported."
+    ),
+  estatus: string({ required_error: "Estatus es requerido" }).min(
+    1,
+    "Estatus no puede estar vacio"
+  ),
+  destacada: coerce.boolean(),
+  fecha_refugio: string().date(),
+  id_refugio: string(),
 });
 
 /*****************REFUGES*******************/

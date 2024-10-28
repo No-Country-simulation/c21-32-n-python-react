@@ -1,10 +1,15 @@
 import PetsCreateForm from "@/app/ui/admin/pets/pets-create-form";
 import React from "react";
 
-export default function pages() {
+export default async function pages() {
+  const refugesResponse = await fetch(
+    "http://127.0.0.1:8000/api/v1/refugio/refugio/"
+  );
+  const refuges = await refugesResponse.json();
+
   return (
     <div>
-      <PetsCreateForm />
+      <PetsCreateForm refuges={refuges} />
     </div>
   );
 }
