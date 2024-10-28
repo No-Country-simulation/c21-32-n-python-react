@@ -95,16 +95,6 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div>
-        <label htmlFor="raza">Raza:</label>
-        <input id="raza" name="raza" className="" />{" "}
-        {submitErrors?.errors.raza && (
-          <span className="text-sm text-red-500">
-            {submitErrors?.errors.raza}
-          </span>
-        )}
-      </div>
-
       <div className="pb-5">
         <label
           htmlFor="raza"
@@ -117,6 +107,11 @@ function PetsCreateForm({ refuges }) {
           name="raza"
           className="mt-1 block w-1/3 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
+        {submitErrors?.errors.raza && (
+          <span className="text-sm text-red-500">
+            {submitErrors?.errors.raza}
+          </span>
+        )}
       </div>
 
       <div className="pb-5">
@@ -150,7 +145,7 @@ function PetsCreateForm({ refuges }) {
           id="edad"
           name="edad"
           className="mt-1 block w-16 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-        />{" "}
+        />
         {submitErrors?.errors.edad && (
           <span className="text-sm text-red-500">
             {submitErrors?.errors.edad}
@@ -202,21 +197,6 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div>
-        <label htmlFor="img_print_mascota">Imagen 2:</label>
-        <input
-          type="file"
-          accept="image/png, image/jpeg, image/jpg"
-          id="img_print_mascota"
-          name="img_print_mascota"
-          className=""
-        />
-        {submitErrors?.errors.img_print_mascota && (
-          <span className="text-sm text-red-500">
-            {submitErrors?.errors.img_print_mascota}
-          </span>
-        )}
-      </div>
       <div className="pb-5">
         <label
           htmlFor="img_print_mascota"
@@ -231,6 +211,11 @@ function PetsCreateForm({ refuges }) {
           name="img_print_mascota"
           className="mt-1 block w-auto rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
+        {submitErrors?.errors.img_print_mascota && (
+          <span className="text-sm text-red-500">
+            {submitErrors?.errors.img_print_mascota}
+          </span>
+        )}
       </div>
 
       <div>
