@@ -1,5 +1,6 @@
 "use client";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRef } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
 const SearchBar = () => {
@@ -7,9 +8,11 @@ const SearchBar = () => {
   const { replace } = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const searchRef = useRef(null);
 
-  const handleSearch = useDebouncedCallback((search) => {
+  const handleSearch = useDebouncedCallback(() => {
     const params = new URLSearchParams(searchParams);
+    const search = searchRef?.current?.value;
     if (search) {
       params.set("search", search);
     } else {
@@ -21,8 +24,9 @@ const SearchBar = () => {
   return (
     <div className="flex mb-4">
       <input
+        ref={searchRef}
         type="text"
-        onChange={(e) => handleSearch(e.target.value)}
+        onChange={handleSearch}
         placeholder="Buscar mascota..."
         className="border border-gray-300 rounded-lg p-2 flex-grow"
       />
