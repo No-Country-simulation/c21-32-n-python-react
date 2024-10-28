@@ -1,6 +1,23 @@
 "use client";
+
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+
 const Filter = () => {
-  const handleChange = (event) => {};
+  const { replace } = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const handleChange = (event) => {
+    const params = new URLSearchParams(searchParams);
+    const selectedValue = event.target.value;
+
+    if (selectedValue) {
+      params.set("filter", selectedValue);
+    } else {
+      params.delete("filter");
+    }
+    replace(`${pathname}?${params.toString()}`);
+  };
 
   return (
     <div className="mb-4">
