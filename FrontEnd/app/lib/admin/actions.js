@@ -1,11 +1,12 @@
 /*****************PETS*******************/
 
-import { createRefuge } from "../data";
-import { refugeCreateSchema } from "./schemas";
+import { createPet, createRefuge } from "../data";
+import { petCreateSchema, refugeCreateSchema } from "./schemas";
 
 export const validatePetSubmit = async (formData) => {
   const dataEntries = Object.fromEntries(formData);
-  const validation = signInSchema.safeParse(dataEntries);
+  //console.log(dataEntries);
+  const validation = petCreateSchema.safeParse(dataEntries);
   if (!validation.success) {
     //console.log(validation.error.flatten().fieldErrors);
     return { success: false, errors: validation.error.flatten().fieldErrors };
@@ -13,7 +14,16 @@ export const validatePetSubmit = async (formData) => {
   return { success: true, errors: {} };
 };
 
-export const createPetAction = async (formData) => {};
+export const createPetAction = async (formData) => {
+  try {
+    const resp = await createPet(formData);
+    if (resp?.status === 201) {
+      return { success: true, errors: {} };
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 /*****************REFUGES*******************/
 
