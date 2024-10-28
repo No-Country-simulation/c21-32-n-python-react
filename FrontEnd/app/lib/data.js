@@ -111,3 +111,37 @@ export const createPet = async (pet) => {
     return null;
   }
 };
+
+export const getFilteredPets = async (search, page, filter) => {
+  console.log("Filter: ", filter);
+  //console.log("Search: ", search);
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:8000/api/v1/pets/mascotas/`,
+      { method: "GET" }
+    );
+
+    const pets = await response.json();
+
+    const filteredData = pets.filter((pet) => {
+      if (search) {
+        return pet.nombre.toUpperCase().includes(search.toUpperCase());
+      }
+      return true;
+    });
+
+    const filterData2 = filteredData.filter((pet) => {
+      if (filter) {
+        return pet.tipo === Number(filter);
+      }
+      return true;
+    });
+    // .filter((pet) => {
+    //   return pet.tipo.includes(filter);
+    // });
+    return filterData2;
+  } catch (error) {
+    //console.log("Error Creating Pet: ", error);
+    return null;
+  }
+};

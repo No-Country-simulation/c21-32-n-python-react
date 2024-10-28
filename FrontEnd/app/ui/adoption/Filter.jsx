@@ -25,9 +25,11 @@ const Filter = () => {
         onChange={handleChange}
         className="border border-gray-300 rounded-lg p-2"
       >
-        <option value="">Selecciona un tipo de mascota</option>
-        <option value="perro">Perro</option>
-        <option value="gato">Gato</option>
+        <option value="" defaultChecked>
+          Selecciona un tipo de mascota
+        </option>
+        <option value="1">Perro</option>
+        <option value="2">Gato</option>
         {/* Agrega más opciones según sea necesario */}
       </select>
     </div>

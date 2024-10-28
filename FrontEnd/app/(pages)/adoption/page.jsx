@@ -1,3 +1,4 @@
+import { getFilteredPets } from "@/app/lib/data";
 import Banner from "@/app/ui/adoption/banner";
 import CardList from "@/app/ui/adoption/cardList";
 import Filter from "@/app/ui/adoption/Filter";
@@ -8,12 +9,9 @@ import NavigationBar from "@/app/ui/shared/navigation-bar";
 const CARDS_TO_SHOW = 8;
 
 export default async function AdoptionPage({ searchParams }) {
-  const { page = "1", search = "" } = await searchParams;
-  const data = await fetch(
-    `http://127.0.0.1:8000/api/v1/pets/mascotas/?search=${search}&page=${page}`
-  );
-  const pets = await data.json();
-  const totalPages = Math.ceil(pets.length / CARDS_TO_SHOW);
+  const { page = "1", search = "", filter = "" } = await searchParams;
+  const pets = await getFilteredPets(search, page, filter);
+  const totalPages = Math.ceil(pets?.length / CARDS_TO_SHOW);
 
   return (
     <div>
