@@ -1,17 +1,18 @@
 // app/adoption/Pagination.jsx
 "use client";
 
-import { redirect, usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Pagination = ({ totalPages }) => {
   const pathname = usePathname();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;
 
   const moveToSelectedPage = (page) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", page.toString());
-    redirect(`${pathname}?${params.toString()}`);
+    router.push(`${pathname}?${params.toString()}`);
   };
 
   return (

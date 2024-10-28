@@ -8,7 +8,7 @@ const SearchBar = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const handleChange = useDebouncedCallback((search) => {
+  const handleSearch = useDebouncedCallback((search) => {
     const params = new URLSearchParams(searchParams);
     if (search) {
       params.set("search", search);
@@ -22,8 +22,7 @@ const SearchBar = () => {
     <div className="flex mb-4">
       <input
         type="text"
-        value={query}
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={(e) => handleSearch(e.target.value)}
         placeholder="Buscar mascota..."
         className="border border-gray-300 rounded-lg p-2 flex-grow"
       />
