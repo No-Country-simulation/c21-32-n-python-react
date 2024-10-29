@@ -31,7 +31,7 @@ function PetsCreateForm({ refuges }) {
       action={(formData) => {
         submitPet(formData);
       }}
-      className="pl-4"
+      className="pl-4 h-auto w-full mt-10 ml-2 p-10 bg-slate-100 rounded-3xl"
     >
       <div className="pb-5">
         <label
@@ -43,7 +43,7 @@ function PetsCreateForm({ refuges }) {
         <input
           id="nombre"
           name="nombre"
-          className="mt-1 block w-1/3 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="border border-gray-700 mt-1 block w-1/3 rounded-md bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
         {submitErrors?.errors.nombre && (
           <span className="text-sm text-red-500">
@@ -61,7 +61,7 @@ function PetsCreateForm({ refuges }) {
         </label>
         <select
           name="tipo"
-          className="mt-1 block w-1/3 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-1/3 rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         >
           <option value="1" selected>
             Perro
@@ -85,7 +85,7 @@ function PetsCreateForm({ refuges }) {
         <textarea
           id="descripcion"
           name="descripcion"
-          className="mt-1 block w-2/3 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none"
+          className="mt-1 block w-2/3 rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none"
           rows="4"
         />
         {submitErrors?.errors.descripcion && (
@@ -105,7 +105,7 @@ function PetsCreateForm({ refuges }) {
         <input
           id="raza"
           name="raza"
-          className="mt-1 block w-1/3 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-1/3 rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
         {submitErrors?.errors.raza && (
           <span className="text-sm text-red-500">
@@ -124,7 +124,7 @@ function PetsCreateForm({ refuges }) {
         <input
           id="peso"
           name="peso"
-          className="mt-1 block w-24 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-24 rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           type="number"
         />
         {submitErrors?.errors.peso && (
@@ -144,7 +144,7 @@ function PetsCreateForm({ refuges }) {
         <input
           id="edad"
           name="edad"
-          className="mt-1 block w-16 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-16 rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
         {submitErrors?.errors.edad && (
           <span className="text-sm text-red-500">
@@ -162,7 +162,7 @@ function PetsCreateForm({ refuges }) {
         </label>
         <select
           name="sexo"
-          className="mt-1 block w-auto rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-auto rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         >
           <option value="M" selected>
             Macho
@@ -188,7 +188,7 @@ function PetsCreateForm({ refuges }) {
           accept="image/png, image/jpeg, image/jpg"
           id="img_home_principal"
           name="img_home_principal"
-          className="mt-1 block w-auto rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-auto rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
         {submitErrors?.errors.img_home_principal && (
           <span className="text-sm text-red-500">
@@ -209,7 +209,7 @@ function PetsCreateForm({ refuges }) {
           accept="image/png, image/jpeg, image/jpg"
           id="img_print_mascota"
           name="img_print_mascota"
-          className="mt-1 block w-auto rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-auto rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
         {submitErrors?.errors.img_print_mascota && (
           <span className="text-sm text-red-500">
@@ -218,8 +218,8 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div>
-        <label htmlFor="estatus">Estado:</label>
+      <div className="pb-4">
+        <label htmlFor="estatus" className="pr-4 ">Estado:</label>
         <select name="estatus">
           <option value="1" selected>
             Nuevo
@@ -235,8 +235,8 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div>
-        <label htmlFor="destacada">Destacada:</label>
+      <div className="pb-4">
+        <label htmlFor="destacada" className="pr-4">Destacada:</label>
         <input
           type="checkbox"
           id="destacada"
@@ -251,9 +251,9 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div>
-        <label htmlFor="fecha_refugio">Fecha llegada:</label>
-        <input type="date" name="fecha_refugio" />
+      <div className="pb-4">
+        <label htmlFor="fecha_refugio" className="pr-4">Fecha llegada:</label>
+        <input className="border border-gray-700" type="date" name="fecha_refugio" />
         {submitErrors?.errors.fecha_refugio && (
           <span className="text-sm text-red-500">
             {submitErrors?.errors.fecha_refugio}
@@ -262,7 +262,7 @@ function PetsCreateForm({ refuges }) {
       </div>
 
       <div>
-        <label htmlFor="id_refugio">Refugio:</label>
+        <label htmlFor="id_refugio" className="pr-4">Refugio:</label>
         <select name="id_refugio">
           <option value={`${refuges?.[0]?.id}`} selected>
             {refuges?.[0]?.name}
@@ -285,7 +285,7 @@ function PetsCreateForm({ refuges }) {
       <div className="flex justify-center mt-4 pb-10">
         <button
           type="submit"
-          className="relative items-center rounded-md bg-green-400 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          className="bg-bgButton w-1/5 hover:bg-[#F2D6B3] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Enviar
         </button>
