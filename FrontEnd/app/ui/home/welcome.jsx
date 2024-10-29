@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Welcome() {
   return (
-    <section id="welcome" className="w-full h-[660px]">
+    <section id="welcome" className="w-full h-[560px]">
       <div className="flex justify-between h-full">
         <div className="m-auto">
           <h1 className="font-bold text-5xl h-28 w-[445px] mb-10">
@@ -26,9 +26,9 @@ export default function Welcome() {
         <Image
           className="m-auto max-h-[538px]"
           alt="Welcome image"
-          src="/images/rectangle.png"
-          width={614}
-          height={538}
+          src="/images/refugio01.jpg"
+          width={410}
+          height={300}
         />
       </div>
     </section>

@@ -10,9 +10,9 @@ export default function Footbar() {
     >
       <Image
         alt="Logo del refugio"
-        src={"/images/logo.png"}
-        width={122}
-        height={86}
+        src={"/images/log.png"}
+        width={61}
+        height={43}
       />
       <div>
         <FootbarLinks />

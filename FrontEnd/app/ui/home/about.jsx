@@ -7,15 +7,13 @@ export default function About() {
       <div className="flex flex-col items-center justify-center w-[730px] h-full mx-auto">
         <p className="font-bold text-5xl mb-7">NOSOTROS</p>
         <p className="font-normal text-xl text-grayText text-center mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non
-          maxime error ipsa ut ipsum inventore, obcaecati vel magnam a
-          repellendus maiores fugiat fuga? Placeat error quibusdam doloremque
+        <span>Bienvenidos a Buscando Huellas</span>, un refugio dedicado a dar una segunda oportunidad a perros y gatos en busca de un hogar amoroso. Fundado en 1990, nuestro refugio ha sido un faro de esperanza para cientos de animales abandonados y maltratados.
         </p>
         <div className="flex justify-around w-full gap-x-2 mb-7">
-          <Avatar />
-          <Avatar />
-          <Avatar />
-          <Avatar />
+          <Avatar1 />
+          <Avatar2 />
+          <Avatar3 />
+          <Avatar4 />
         </div>
         <Image
           className="max-w-[754px] max-h-[358px]"
@@ -29,7 +27,7 @@ export default function About() {
   );
 }
 
-const Avatar = () => {
+const Avatar1 = () => {
   return (
     <div>
       <Image
@@ -43,3 +41,49 @@ const Avatar = () => {
     </div>
   );
 };
+
+const Avatar2 = () => {
+  return (
+    <div>
+      <Image
+        className="mb-5"
+        src="/images/circle.png"
+        alt="Testimonial Avatar"
+        height={70}
+        width={70}
+      />
+      <p>Nombre</p>
+    </div>
+  );
+};
+
+const Avatar3 = () => {
+  return (
+    <div>
+      <Image
+        className="mb-5"
+        src="/images/circle.png"
+        alt="Testimonial Avatar"
+        height={64}
+        width={64}
+      />
+      <p>Nombre</p>
+    </div>
+  );
+};
+
+const Avatar4 = () => {
+  return (
+    <div>
+      <Image
+        className="mb-5"
+        src="/images/circle.png"
+        alt="Testimonial Avatar"
+        height={64}
+        width={64}
+      />
+      <p>Nombre</p>
+    </div>
+  );
+};
+
