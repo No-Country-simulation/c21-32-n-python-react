@@ -29,14 +29,14 @@ export default function RefugesCreateForm() {
   action={(formData) => {
     submitRefuge(formData);
   }}
-  className="flex flex-col gap-4 pt-5 pl-4"
+  className="pl-4 h-auto w-full mt-10 ml-2 p-10 bg-slate-100 rounded-3xl"
 >
   <div className="flex flex-col">
     <label htmlFor="name" className="text-gray-700 font-medium">Nombre:</label>
     <input
       id="name"
       name="name"
-      className="border rounded-md w-1/3 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-gray-700 rounded-md w-1/3 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     {submitErrors?.errors?.name && (
       <span className="text-sm text-red-600">
@@ -52,7 +52,7 @@ export default function RefugesCreateForm() {
       accept="image/png, image/jpg, image/jpeg, image/webp"
       id="dirlogo"
       name="dirlogo"
-      className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     {submitErrors?.errors?.dirlogo && (
       <span className="text-sm text-red-600">
@@ -70,7 +70,7 @@ export default function RefugesCreateForm() {
       type="time"
       name="Horario_atencion"
       step={2}
-      className="border w-1/3 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-gray-700 w-1/3 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     {submitErrors?.errors?.Horario_atencion && (
       <span className="text-sm text-red-600">
@@ -86,7 +86,7 @@ export default function RefugesCreateForm() {
     <input
       id="direccion"
       name="direccion"
-      className="border w-1/2 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-gray-700 w-1/2 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     {submitErrors?.errors?.direccion && (
       <span className="text-sm text-red-600">
@@ -102,7 +102,7 @@ export default function RefugesCreateForm() {
     <input
       id="telefono"
       name="telefono"
-      className="border w-[20%] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-gray-700 w-[20%] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     {submitErrors?.errors?.telefono && (
       <span className="text-sm text-red-600">
@@ -119,7 +119,7 @@ export default function RefugesCreateForm() {
       type="number"
       id="coordy"
       name="coordy"
-      className="border w-[15%] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-gray-700 w-[15%] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     {submitErrors?.errors?.coordy && (
       <span className="text-sm text-red-600">
@@ -136,7 +136,7 @@ export default function RefugesCreateForm() {
       type="number"
       id="coordx"
       name="coordx"
-      className="border w-[15%] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-gray-700 w-[15%] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     {submitErrors?.errors?.coordx && (
       <span className="text-sm text-red-600">
@@ -152,7 +152,7 @@ export default function RefugesCreateForm() {
     <textarea
       id="descripcion"
       name="descripcion"
-      className="border w-1/2 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+      className="border border-gray-700 w-1/2 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
       rows="4"
     />
     {submitErrors?.errors?.descripcion && (
@@ -165,7 +165,7 @@ export default function RefugesCreateForm() {
   <div className="flex justify-center items-center mt-5 mb-7">
   <button
     type="submit"
-    className="bg-bgButton w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+    className="bg-bgButton w-1/5 hover:bg-[#F2D6B3] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
   >
     Enviar
   </button>

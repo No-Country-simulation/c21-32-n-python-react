@@ -15,9 +15,8 @@ export default async function AdoptionPage({ searchParams }) {
 
   return (
     <div>
-      <div className="container mx-auto">
+      <div>
         <NavigationBar />
-        <Banner />
       </div>
       <div className="flex justify-around pt-12">
         <SearchBar />
