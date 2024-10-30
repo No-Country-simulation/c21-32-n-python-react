@@ -24,7 +24,7 @@ export default function Welcome() {
           </div>
         </div>
         <Image
-          className="m-auto max-h-[538px]"
+          className="m-auto max-h-[538px] rounded-lg"
           alt="Welcome image"
           src="/images/refugio01.jpg"
           width={410}

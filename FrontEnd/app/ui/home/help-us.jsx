@@ -18,7 +18,7 @@ export default function HelpUs() {
             ¡Necesitamos de tu ayuda!
           </h1>
           <p className="font-normal mb-36 text-[#545454]">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit
+          <span className="font-bold text-black">Gracias por apoyar nuestra causa</span> y apoyar Nuestro Refugio. Juntos, podemos cambiar vidas y crear un futuro mejor para todos nuestros amigos de cuatro patas.
           </p>
           <Link href="/donations">
             <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
