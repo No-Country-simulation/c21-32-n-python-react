@@ -63,7 +63,7 @@ export default async function NavigationBar() {
         </form>
       ) : (
         <Link href="/login">
-          <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg mr-10 ml-10">
+          <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5] mr-10 ml-10">
             Ingresar
           </button>
         </Link>

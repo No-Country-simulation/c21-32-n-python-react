@@ -12,12 +12,12 @@ export default function Welcome() {
           </h1>
           <div className="flex justify-around">
             <Link href="adoption">
-              <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+              <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5]">
                 Adoptar
               </button>
             </Link>
             <Link href="/register">
-              <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+              <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5]">
                 Registrar
               </button>
             </Link>

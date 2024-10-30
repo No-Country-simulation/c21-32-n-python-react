@@ -3,7 +3,7 @@ import RegisterForm from "@/app/ui/register/register-form";
 
 export default function register() {
   return (
-    <div className="w-full h-screen bg-[#d9d9d9]">
+    <div className="w-full h-screen">
       <div className="flex justify-between h-full ">
         <div className="w-1/2 hidden lg:block">
           <Image
