@@ -12,11 +12,11 @@ export default function Highlighted() {
               className="m-auto max-h-8"
               alt="star image"
               src="/images/circle.png"
-              width={32}
-              height={32}
+              width={16}
+              height={16}
             />
             <h4 className="font-semibold text-2xl w-[400px]">
-              Nombre de Perrito
+              Nombre: Boby
             </h4>
           </div>
           <div className="flex gap-4 h-8">
@@ -24,15 +24,15 @@ export default function Highlighted() {
               className="m-auto max-h-8"
               alt="star image"
               src="/images/circle.png"
-              width={32}
-              height={32}
+              width={16}
+              height={16}
             />
             <h4 className="font-semibold text-2xl w-[400px]">
               Caracteristicas
             </h4>
           </div>
           <p className="font-normal mb-20 text-[#545454]">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit
+            Boby es un perro de raza mixta. Es un perro pequeño <br></br> y tiene pelaje de mezcla de colores (marrón, blanco y negro).<br></br> Es un perro muy bonito y muy amable.
           </p>
           <div className="flex justify-center">
             {/* TODO: recibir id para el detalle*/}
@@ -46,8 +46,8 @@ export default function Highlighted() {
         <Image
           className="m-auto max-h-[396px]"
           alt="Welcome image"
-          src="/images/rectangle.png"
-          width={630}
+          src="/images/firulais.jpg"
+          width={430}
           height={396}
         />
       </div>

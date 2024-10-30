@@ -7,7 +7,7 @@ export default function About() {
       <div className="flex flex-col items-center justify-center w-[730px] h-full mx-auto">
         <p className="font-bold text-5xl mb-7">NOSOTROS</p>
         <p className="font-normal text-xl text-grayText text-center mb-4">
-        <span>Bienvenidos a Buscando Huellas</span>, un refugio dedicado a dar una segunda oportunidad a perros y gatos en busca de un hogar amoroso. Fundado en 1990, nuestro refugio ha sido un faro de esperanza para cientos de animales abandonados y maltratados.
+        <span className="font-bold text-black">Bienvenidos a Buscando Huellas</span>, un refugio dedicado a dar una segunda oportunidad a perros y gatos en busca de un hogar amoroso. Fundado en 1990, nuestro refugio ha sido un faro de esperanza para cientos de animales abandonados y maltratados.
         </p>
         <div className="flex justify-around w-full gap-x-2 mb-7">
           <Avatar1 />
@@ -16,11 +16,11 @@ export default function About() {
           <Avatar4 />
         </div>
         <Image
-          className="max-w-[754px] max-h-[358px]"
-          src="/images/rectangle.png"
+          className="max-w-[754px] max-h-[358px] rounded-lg"
+          src="/images/Nosotros.jpg"
           alt="Imagen del refugio"
-          height={358}
-          width={754}
+          height={500}
+          width={600}
         />
       </div>
     </section>
@@ -31,13 +31,13 @@ const Avatar1 = () => {
   return (
     <div>
       <Image
-        className="mb-5"
-        src="/images/circle.png"
+        className="mb-5 rounded-full" 
+        src="/images/face1.jpg"
         alt="Testimonial Avatar"
-        height={64}
-        width={64}
+        height={70}
+        width={70}
       />
-      <p>Nombre</p>
+      <p className="text-center">María José <br></br> García</p>
     </div>
   );
 };
@@ -46,13 +46,13 @@ const Avatar2 = () => {
   return (
     <div>
       <Image
-        className="mb-5"
-        src="/images/circle.png"
+        className="mb-5 rounded-full"
+        src="/images/face2.jpg"
         alt="Testimonial Avatar"
-        height={70}
-        width={70}
+        height={80}
+        width={80}
       />
-      <p>Nombre</p>
+      <p className="text-center">Luis Felipe<br></br>Montaño</p>
     </div>
   );
 };
@@ -61,13 +61,13 @@ const Avatar3 = () => {
   return (
     <div>
       <Image
-        className="mb-5"
-        src="/images/circle.png"
+        className="mb-5 rounded-full"
+        src="/images/face3.jpg"
         alt="Testimonial Avatar"
-        height={64}
-        width={64}
+        height={80}
+        width={80}
       />
-      <p>Nombre</p>
+      <p className="text-center">Angela Camila<br></br>Gonzalez</p>
     </div>
   );
 };
@@ -76,13 +76,13 @@ const Avatar4 = () => {
   return (
     <div>
       <Image
-        className="mb-5"
-        src="/images/circle.png"
+        className="mb-5 rounded-full"
+        src="/images/face4.jpg"
         alt="Testimonial Avatar"
-        height={64}
-        width={64}
+        height={80}
+        width={80}
       />
-      <p>Nombre</p>
+      <p className="text-center">Miguel Angel<br></br>Zanabria</p>
     </div>
   );
 };
