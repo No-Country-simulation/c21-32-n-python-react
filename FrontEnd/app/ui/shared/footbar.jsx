@@ -6,28 +6,29 @@ export default function Footbar() {
   return (
     <section
       id="footbar"
-      className="w-full h-[223px] bg-[#024873] flex justify-between items-center">
+      className="w-full h-[223px] bg-[#024873] flex justify-center items-center" // Aquí se centra el contenido horizontal y verticalmente
+    >
+      <div className="flex items-center gap-16"> {/* Espacio entre elementos */}
+        <div className="flex items-center mr-16">
+          <Link href="/">
+            <Image
+              className="ml-28 md:ml-12 sm:ml-4 h-full object-cover"
+              alt="Logo del refugio"
+              src="/images/log.png"
+              width={100}
+              height={60}
+            />
+          </Link>
+        </div>
 
-      <div className="flex items-center mr-auto mx-8">
-        <Link href="/">
-          <Image
-            className="ml-28 md:ml-12 sm:ml-4 h-full object-cover object-center"
-            alt="Logo del refugio"
-            src="/images/log.png"
-            width={100}
-            height={60}
-          />
-        </Link>
-        
+        <div className="flex flex-col items-center"> {/* Centrado verticalmente */}
+          <FootbarLinks />
+          <p className="font-normal text-sm text-slate-300 text-center">
+            © Copyright 2024 xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          </p>
+        </div>
+        <SocialLinks />
       </div>
-
-      <div>
-        <FootbarLinks />
-        <p className="font-normal text-sm text-slate-300 text-center">
-          © Copyright 2024 xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        </p>
-      </div>
-      <SocialLinks />
     </section>
   );
 }
