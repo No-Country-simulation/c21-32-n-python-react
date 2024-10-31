@@ -113,7 +113,7 @@ export const createPet = async (pet) => {
 };
 
 export const getFilteredPets = async (search, page, filter) => {
-  console.log("Filter: ", filter);
+  //console.log("Filter: ", filter);
   //console.log("Search: ", search);
   try {
     const response = await fetch(
@@ -122,6 +122,7 @@ export const getFilteredPets = async (search, page, filter) => {
     );
 
     const pets = await response.json();
+    //console.log(pets);
 
     const filteredData = pets.filter((pet) => {
       if (search) {
