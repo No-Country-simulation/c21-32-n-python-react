@@ -1,4 +1,4 @@
-"use client";
+"use server";
 import { revalidatePath } from "next/cache";
 /*****************PETS*******************/
 
@@ -20,12 +20,11 @@ export const createPetAction = async (formData) => {
   try {
     const resp = await createPet(formData);
     if (resp?.status === 201) {
+      revalidatePath("/adoption");
       return { success: true, errors: {} };
     }
   } catch (error) {
     console.log(error);
-  } finally {
-    revalidatePath("/adoption");
   }
 };
 
@@ -47,11 +46,10 @@ export const createRefugeAction = async (formData) => {
   try {
     const resp = await createRefuge(formData);
     if (resp?.status === 201) {
+      revalidatePath("/admin/dashboard/refuges");
       return { success: true, errors: {} };
     }
   } catch (error) {
     console.log(error);
-  } finally {
-    revalidatePath("/admin/dashboard/refuges");
   }
 };
