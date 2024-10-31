@@ -20,27 +20,24 @@ export default async function NavigationBar() {
             height={60}
           />
         </Link>
-        
       </div>
       <Image
-            className="absolute top-[2.2rem] z-0 lg:left-[18%] xl:left-[28%] lg:max-2xl:left[38] hidden md:block"
-            alt="pets"
-            src="/images/banner1.png"
-            width={300}
-            height={200}
-          />
+        className="absolute top-[2.2rem] z-0 lg:left-[18%] xl:left-[28%] lg:max-2xl:left[38] hidden md:block"
+        alt="pets"
+        src="/images/banner1.png"
+        width={300}
+        height={200}
+      />
 
       <div className="z-10 md:flex ml-8 gap-10 hidden md:max-sm:block">
-        
         <Link href="/adoption">
-            <p className="font-semibold text-gray-50">Adopción</p>
-          </Link>
-        {/*!isAdmin && (
-          
-        )*/}
-        <Link href="/donations">
-          <p className="font-semibold text-gray-50">Donaciones</p>
+          <p className="font-semibold text-gray-50">Adopción</p>
         </Link>
+        {!isAdmin && (
+          <Link href="/donations">
+            <p className="font-semibold text-gray-50">Donaciones</p>
+          </Link>
+        )}
         <Link href="/#about-us">
           <p className="font-semibold text-gray-50">Nosotros</p>
         </Link>
@@ -48,14 +45,13 @@ export default async function NavigationBar() {
           <p className="font-semibold text-gray-50">Contacto</p>
         </Link>
         <Link href="/admin/dashboard">
-            <p className="font-semibold text-gray-50">Solicitudes</p>
+          <p className="font-semibold text-gray-50">Solicitudes</p>
+        </Link>
+        {isAdmin && (
+          <Link href="/users/pets">
+            <p className="font-semibold text-base">Mascotas</p>
           </Link>
-        {/*isAdmin && (
-          
-        )*/}
-        {/* <Link href="/users/pets">
-          <p className="font-semibold text-base">Mascotas</p>
-        </Link> */}
+        )}
       </div>
       {session?.user ? (
         <form action={signOutNav}>
@@ -69,6 +65,5 @@ export default async function NavigationBar() {
         </Link>
       )}
     </div>
-    
   );
 }
