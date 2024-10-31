@@ -28,7 +28,6 @@ export default function Contact() {
         </div>
         <Image
           className="min-h-[450px] max-h-[450px] max-w-[372]"
-          alt="mapa"
           width={372}
           height={450}
           src="/images/cat.png"

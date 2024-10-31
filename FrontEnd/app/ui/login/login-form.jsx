@@ -77,7 +77,7 @@ export default function LoginForm() {
       <div>
         <button
           type="submit"
-          className="flex w-full justify-center rounded-md bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5]"
+          className="flex w-full justify-center rounded-md bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#FFBA75]"
         >
           Sign in
         </button>

@@ -22,7 +22,7 @@ export default function register() {
             ¿Ya tienes cuenta?{" "}
             <a
               href="/login"
-              className="font-semibold leading-6 text-[#fd8d53] hover:text-[#faa16e]"
+              className="font-semibold leading-6 text-[#fd8d53] hover:text-[#faa16e] animate-pulse"
             >
               Inicia Sesión
             </a>

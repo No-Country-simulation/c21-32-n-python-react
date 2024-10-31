@@ -10,10 +10,10 @@ export default async function NavigationBar() {
 
   return (
     <div className="relative flex items-center justify-between bg-[#024873] w-screen h-24">
-      <div className="flex items-center mr-auto mx-8">
+      <div className="z-10 flex items-center mr-auto mx-8">
         <Link href="/">
           <Image
-            className="ml-28 md:ml-12 sm:ml-4 h-full object-cover object-center"
+            className=" ml-28 md:ml-12 sm:ml-2 h-full object-cover object-center mr-4"
             alt="Logo del refugio"
             src="/images/log.png"
             width={100}
@@ -22,16 +22,16 @@ export default async function NavigationBar() {
         </Link>
         
       </div>
-     
-
-      <div className="md:flex ml-8 gap-10 hidden md:max-sm:block">
-        <Image
-            className="absolute top-[2.2rem] z-10 md:left-4 lg:left-[18%] xl:left-[28%] lg:max-2xl:left[38] hidden md:block"
+      <Image
+            className="absolute top-[2.2rem] z-0 lg:left-[18%] xl:left-[28%] lg:max-2xl:left[38] hidden md:block"
             alt="pets"
             src="/images/banner1.png"
             width={300}
             height={200}
           />
+
+      <div className="z-10 md:flex ml-8 gap-10 hidden md:max-sm:block">
+        
         <Link href="/adoption">
             <p className="font-semibold text-gray-50">Adopción</p>
           </Link>

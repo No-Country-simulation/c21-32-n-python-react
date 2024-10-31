@@ -3,6 +3,7 @@ import React from "react";
 export default function MapLocation() {
   return (
     <iframe
+      className="ml-5"
       width="275"
       height="275"
       style={{ border: 0 }}

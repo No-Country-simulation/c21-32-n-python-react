@@ -7,27 +7,27 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: '“Estamos muy contentos con la adopcion del gato manchitas, nos lleno la casa de alegria.”',
-      author: 'Armando',
-      title: 'Integrante de "Sin Bandera"',
-      image: 'https://i.pinimg.com/736x/3d/4f/fd/3d4ffd27b4d6eae0cb43872d91b857bb.jpg'
+      author: 'Armando Bustamante',
+      title: 'Obrero',
+      image: './images/user1.jpg'
     },
     {
       quote: '“Hemos adoptado un perro hace unos dias y realmente no sabiamos lo importante que era para nuestros hijos, gracias”',
-      author: 'Vinicius Junior',
-      title: 'Traficante de mascotas',
-      image: 'https://img.a.transfermarkt.technology/portrait/big/371998-1664869583.jpg?lm=1'
+      author: 'Vladimir Guerrero',
+      title: 'Bombero',
+      image: './images/user2.jpg'
     },
     {
       quote: '“Estamos completamente locos con Rita, es más que buena..preciosa, estamos toda la familia enamorados..Está ya vacunada de todo…y tenemos asignado un veterinario voluntario en asistir perros de la perrera de Barcelona…encantado también con ella, muchiiisimas gracias por todo tu apoyo…”',
-      author: 'Mario Bros',
-      title: 'Proxeneta',
-      image: 'https://i.pinimg.com/736x/b3/f8/2e/b3f82e8375f5d4ec86cc3272a7d154c4.jpg'
+      author: 'Sergi Cordoba',
+      title: 'Freelance',
+      image: './images/user3.jpg'
     },
     {
       quote: '“Mi vida cambió el día que adopté a Misifu. Era un gatito negro, con ojos verdes que brillaban como esmeraldas. Lo encontré en un refugio, acurrucado en un rincón, con miedo. Lo tomé en brazos y sentí un calorcito que me llenó el corazón.”',
-      author: 'Donald Trump',
-      title: 'Buhonero',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/800px-Donald_Trump_official_portrait.jpg'
+      author: 'Constanza Martinez',
+      title: 'Arquitecta',
+      image: './images/user4.jpg'
     },
   ];
 

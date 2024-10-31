@@ -4,12 +4,12 @@ import LoginForm from "@/app/ui/login/login-form";
 export default function LoginPage() {
   return (
 <div className="w-full h-screen flex">
-  <div className="w-1/2 h-screen relative shadow-2xl">
+  <div className="w-1/2 h-screen relative shadow-2xl hidden md:block">
     <Image
       src="/images/cat-login.png"
       alt="Cat"
       fill
-      className="object-cover" // Ajusta la imagen al contenedor
+      className="object-cover mt-4" // Ajusta la imagen al contenedor
     />
   </div>
   <div className="w-full md:w-1/2 flex flex-col h-full flex-grow">
@@ -28,7 +28,8 @@ export default function LoginPage() {
         ¿No tienes cuenta?{" "}
         <a
           href="register"
-          className="font-semibold leading-6 text-[#fd8d53] hover:text-[#faa16e]"
+          className="font-semibold leading-6 text-bgButton hover:text-[#FFBA75;
+          ] animate-pulse"
         >
           Crea una ahora
         </a>
