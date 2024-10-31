@@ -1,3 +1,5 @@
+"use client";
+import { revalidatePath } from "next/cache";
 /*****************PETS*******************/
 
 import { createPet, createRefuge } from "../data";
@@ -22,6 +24,8 @@ export const createPetAction = async (formData) => {
     }
   } catch (error) {
     console.log(error);
+  } finally {
+    revalidatePath("/adoption");
   }
 };
 
@@ -47,5 +51,7 @@ export const createRefugeAction = async (formData) => {
     }
   } catch (error) {
     console.log(error);
+  } finally {
+    revalidatePath("/admin/dashboard/refuges");
   }
 };

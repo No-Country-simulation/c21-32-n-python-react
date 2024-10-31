@@ -28,9 +28,7 @@ function PetsCreateForm({ refuges }) {
   return (
     <form
       ref={formRef}
-      action={(formData) => {
-        submitPet(formData);
-      }}
+      action={submitPet}
       className="pl-4 h-auto w-full mt-10 ml-2 p-10 bg-slate-100 rounded-3xl"
     >
       <div className="pb-5">
@@ -219,7 +217,9 @@ function PetsCreateForm({ refuges }) {
       </div>
 
       <div className="pb-4">
-        <label htmlFor="estatus" className="pr-4 ">Estado:</label>
+        <label htmlFor="estatus" className="pr-4 ">
+          Estado:
+        </label>
         <select name="estatus">
           <option value="1" selected>
             Nuevo
@@ -236,7 +236,9 @@ function PetsCreateForm({ refuges }) {
       </div>
 
       <div className="pb-4">
-        <label htmlFor="destacada" className="pr-4">Destacada:</label>
+        <label htmlFor="destacada" className="pr-4">
+          Destacada:
+        </label>
         <input
           type="checkbox"
           id="destacada"
@@ -252,8 +254,14 @@ function PetsCreateForm({ refuges }) {
       </div>
 
       <div className="pb-4">
-        <label htmlFor="fecha_refugio" className="pr-4">Fecha llegada:</label>
-        <input className="border border-gray-700" type="date" name="fecha_refugio" />
+        <label htmlFor="fecha_refugio" className="pr-4">
+          Fecha llegada:
+        </label>
+        <input
+          className="border border-gray-700"
+          type="date"
+          name="fecha_refugio"
+        />
         {submitErrors?.errors.fecha_refugio && (
           <span className="text-sm text-red-500">
             {submitErrors?.errors.fecha_refugio}
@@ -262,7 +270,9 @@ function PetsCreateForm({ refuges }) {
       </div>
 
       <div>
-        <label htmlFor="id_refugio" className="pr-4">Refugio:</label>
+        <label htmlFor="id_refugio" className="pr-4">
+          Refugio:
+        </label>
         <select name="id_refugio">
           <option value={`${refuges?.[0]?.id}`} selected>
             {refuges?.[0]?.name}
