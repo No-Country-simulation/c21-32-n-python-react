@@ -22,7 +22,7 @@ export default function UsersTable({ users }) {
         {users?.map((user, i) => {
           return (
             <tr key={i} className="border-b">
-              <td className="py-4">{user.name + user.lastName}</td>
+              <td className="py-4">{`${user.name} ${user.lastName}`}</td>
               <td className="py-4">{user.email}</td>
               <td className="py-4">{user.refugio}</td>
               <td className="py-4 flex gap-x-1">
