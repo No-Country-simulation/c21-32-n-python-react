@@ -12,12 +12,12 @@ export default function Welcome() {
           </h1>
           <div className="flex justify-around">
             <Link href="adoption">
-              <button className="rounded-md w-28 h-10 bg-gradient-to-l from-red-500 to-orange-500 bg-bgButton px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5]">
+              <button className="rounded-md w-28 h-10 bg-gradient-to-l from-red-500 to-orange-500 bg-bgButton px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:outline hover:outline-offset-1 hover:outline-[#024873] ">
                 Adoptar
               </button>
             </Link>
             <Link href="/register">
-              <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 bg-bgButton px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5]">
+              <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 bg-bgButton px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:outline hover:outline-offset-1 hover:outline-[#024873]">
                 Regístrate
               </button>
             </Link>
@@ -25,7 +25,7 @@ export default function Welcome() {
         </div>
         <div className="hidden md:block m-auto">
           <Image
-            className="mt-12 h-[450px] w-11/12 rounded-lg"
+            className="mt-12 h-[450px] w-11/12 rounded-lg border border-black"
             alt="Welcome image"
             src="/images/refugio01.jpg"
             width={410}

@@ -16,7 +16,7 @@ export default function About() {
           <Avatar4 />
         </div>
         <Image
-          className="max-w-[754px] max-h-[358px] rounded-lg"
+          className="max-w-[754px] max-h-[358px] rounded-lg border border-black"
           src="/images/Nosotros.jpg"
           alt="Imagen del refugio"
           height={500}
@@ -31,7 +31,7 @@ const Avatar1 = () => {
   return (
     <div>
       <Image
-        className="mb-5 rounded-full" 
+        className="mb-5 rounded-full border border-black" 
         src="/images/face1.jpg"
         alt="Testimonial Avatar"
         height={120}
@@ -46,7 +46,7 @@ const Avatar2 = () => {
   return (
     <div>
       <Image
-        className="mb-5 rounded-full"
+        className="mb-5 rounded-full border border-black"
         src="/images/face2.jpg"
         alt="Testimonial Avatar"
         height={120}
@@ -61,7 +61,7 @@ const Avatar3 = () => {
   return (
     <div>
       <Image
-        className="mb-5 rounded-full"
+        className="mb-5 rounded-full border border-black"
         src="/images/face3.jpg"
         alt="Testimonial Avatar"
         height={120}
@@ -76,7 +76,7 @@ const Avatar4 = () => {
   return (
     <div>
       <Image
-        className="mb-5 rounded-full"
+        className="mb-5 rounded-full border border-black"
         src="/images/face4.jpg"
         alt="Testimonial Avatar"
         height={120}

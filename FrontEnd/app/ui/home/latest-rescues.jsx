@@ -44,7 +44,7 @@ export default function LatestRescues() {
         <div className="flex justify-center gap-x-4 h-full w-full ">
           {lastestRescues.map((card, i) => {
             return (
-              <div key={card.id + i} className="w-[255px] h-[400px]">
+              <div key={card.id + i} className="w-[255px] h-[400px] border shadow">
                 <Card key={card.id} {...card} />
               </div>
             );

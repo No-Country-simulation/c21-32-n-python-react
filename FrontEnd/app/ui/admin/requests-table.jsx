@@ -17,7 +17,7 @@ export default function RequestsTable({ requests }) {
         {requests?.map((request, i) => {
           return (
             <tr key={i} className="border-b">
-              <td className="py-4">{request.name + request.lastName}</td>
+              <td className="py-4">{`${request.name} ${request.lastName}`}</td>
               <td className="py-4">{request.email}</td>
               <td className="py-4">{request.date}</td>
               <td className="py-4">

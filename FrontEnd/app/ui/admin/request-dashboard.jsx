@@ -6,7 +6,7 @@ import Image from "next/image";
 import UsersTable from "./users-table";
 //import { useSearchParams } from "next/navigation";
 
-export default function RequestDashboard({ requests, totalPages }) {
+export default function RequestDashboard({ requests, users, totalPages }) {
   //const searchParams = useSearchParams();
   //const query = searchParams.get("page");
   const [isRequestsChecked, setIsRequestsChecked] = useState(true);
@@ -49,7 +49,7 @@ export default function RequestDashboard({ requests, totalPages }) {
               Usuarios
             </label>
           </div>
-          <div className="flex min-w-64 max-h-10 bg-[#F9FBFF] rounded-xl py-3 px-2">
+          <div className="flex min-w-64 max-h-10 bg-[#AABBCC] rounded-xl py-3 px-2">
             <Image
               alt="Lens icon"
               src={"/icons/lens-icon.png"}
@@ -65,7 +65,7 @@ export default function RequestDashboard({ requests, totalPages }) {
         {isRequestsChecked ? (
           <RequestsTable requests={requests} />
         ) : (
-          <UsersTable users={requests} />
+          <UsersTable users={users} />
         )}
       </div>
       <AdminPagination totalPages={totalPages} />
