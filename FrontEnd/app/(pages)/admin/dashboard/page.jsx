@@ -7,12 +7,15 @@ export default async function AdminDashboardPage() {
   console.log(requests);
   console.log(users);
   return (
-    <div className=" h-[825px] w-full mt-10 ml-2 p-10 bg-slate-100 rounded-3xl">
-      <RequestDashboard
-        requests={requests}
-        totalPages={totalPages}
-        users={users}
-      />
+    <div className="h-auto w-auto mt-10 mr-2 ml-2 p-2 bg-[#024873] border rounded-3xl" >
+      <div className=" pl-6 pr-6 h-auto w-auto mt-2 pt-6 bg-slate-100 border rounded-3xl">
+      <p className="flex justify-center items-center font-bold text-5xl mb-7 text-[#0e4a67]">Administracion de Solicitudes</p>
+        <RequestDashboard
+          requests={requests}
+          totalPages={totalPages}
+          users={users}
+        />
+      </div>
     </div>
   );
 }

@@ -49,7 +49,7 @@ export default function RequestDashboard({ requests, users, totalPages }) {
               Usuarios
             </label>
           </div>
-          <div className="flex min-w-64 max-h-10 bg-[#F9FBFF] rounded-xl py-3 px-2">
+          <div className="flex min-w-64 max-h-10 bg-[#AABBCC] rounded-xl py-3 px-2">
             <Image
               alt="Lens icon"
               src={"/icons/lens-icon.png"}

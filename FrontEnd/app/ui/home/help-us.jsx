@@ -7,7 +7,7 @@ export default function HelpUs() {
     <section id="help-us" className="h-[670px] w-full relative">
       <div className="flex justify-between h-full">
         <Image
-          className="m-auto max-h-[395px] hidden md:block rounded-lg"
+          className="m-auto max-h-[395px] hidden md:block rounded-lg border border-black"
           alt="Welcome image"
           src="/images/help.jpg"
           width={519}

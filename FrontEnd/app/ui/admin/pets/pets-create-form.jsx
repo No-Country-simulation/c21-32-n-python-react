@@ -26,15 +26,17 @@ function PetsCreateForm({ refuges }) {
   };
 
   return (
+  <div className="h-auto w-auto mt-10 mr-2 ml-2 p-2 bg-[#024873] border rounded-3xl" >
     <form
       ref={formRef}
       action={submitPet}
-      className="pl-4 h-auto w-full mt-10 ml-2 p-10 bg-slate-100 rounded-3xl"
+      className="pl-6 pr-6 h-auto w-auto mt-2 pt-6 bg-slate-100 border rounded-3xl"
     >
-      <div className="pb-5">
+      <div className="pb-6">
+      <p className="flex justify-center items-center font-bold text-5xl mb-7 text-[#0e4a67]">Registro Mascota</p>
         <label
           htmlFor="nombre"
-          className="mt-6 block text-sm font-medium text-gray-700"
+          className="mt-6 block font-medium text-gray-700"
         >
           Nombre:
         </label>
@@ -50,10 +52,10 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-5">
+      <div className="pb-6">
         <label
           htmlFor="tipo"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-gray-700"
         >
           Tipo:
         </label>
@@ -73,10 +75,10 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="h-36 pb-0">
+      <div className="h-36 pb-6">
         <label
           htmlFor="descripcion"
-          className="flex text-sm font-medium text-gray-700"
+          className="flex font-medium text-gray-700"
         >
           Descripción:
         </label>
@@ -93,10 +95,10 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-5">
+      <div className="pb-6">
         <label
           htmlFor="raza"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium text-gray-700"
         >
           Raza:
         </label>
@@ -112,10 +114,10 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-5">
+      <div className="pb-6">
         <label
           htmlFor="peso"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium text-gray-700"
         >
           Peso:
         </label>
@@ -132,10 +134,10 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-5">
+      <div className="pb-6">
         <label
           htmlFor="edad"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium text-gray-700"
         >
           Edad:
         </label>
@@ -151,10 +153,10 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-5">
+      <div className="pb-6">
         <label
           htmlFor="sexo"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium text-gray-700"
         >
           Sexo:
         </label>
@@ -174,10 +176,10 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-5">
+      <div className="pb-6">
         <label
           htmlFor="img_home_principal"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium text-gray-700"
         >
           Imagen 1:
         </label>
@@ -192,13 +194,14 @@ function PetsCreateForm({ refuges }) {
           <span className="text-sm text-red-500">
             {submitErrors?.errors.img_home_principal}
           </span>
+          
         )}
       </div>
 
-      <div className="pb-5">
+      <div className="pb-6">
         <label
           htmlFor="img_print_mascota"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium text-gray-700"
         >
           Imagen 2:
         </label>
@@ -216,7 +219,7 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-4">
+      <div className="pb-6">
         <label htmlFor="estatus" className="pr-4 ">
           Estado:
         </label>
@@ -235,7 +238,7 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-4">
+      <div className="pb-6">
         <label htmlFor="destacada" className="pr-4">
           Destacada:
         </label>
@@ -253,7 +256,7 @@ function PetsCreateForm({ refuges }) {
         )}
       </div>
 
-      <div className="pb-4">
+      <div className="pb-6">
         <label htmlFor="fecha_refugio" className="pr-4">
           Fecha llegada:
         </label>
@@ -298,6 +301,7 @@ function PetsCreateForm({ refuges }) {
         </button>
       </div>
     </form>
+  </div>
   );
 }
 

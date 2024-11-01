@@ -31,34 +31,34 @@ export default async function NavigationBar() {
 
       <div className="z-10 md:flex ml-8 gap-10 hidden md:max-sm:block">
         <Link href="/adoption">
-          <p className="font-semibold text-gray-50">Adopción</p>
+          <p className="font-semibold text-gray-50 hover:text-[#FFF79F]">Adopción</p>
         </Link>
         {!isAdmin && (
           <Link href="/donations">
-            <p className="font-semibold text-gray-50">Donaciones</p>
+            <p className="font-semibold text-gray-50 hover:text-[#FFF79F]">Donaciones</p>
           </Link>
         )}
         <Link href="/#about-us">
-          <p className="font-semibold text-gray-50">Nosotros</p>
+          <p className="font-semibold text-gray-50 hover:text-[#FFF79F]">Nosotros</p>
         </Link>
         <Link href="/#contact">
-          <p className="font-semibold text-gray-50">Contacto</p>
+          <p className="font-semibold text-gray-50 hover:text-[#FFF79F]">Contacto</p>
         </Link>
         {isAdmin && (
           <Link href="/admin/dashboard">
-            <p className="font-semibold text-gray-50">Solicitudes</p>
+            <p className="font-semibold text-gray-50 hover:text-[#FFF79F]">Solicitudes</p>
           </Link>
         )}
       </div>
       {session?.user ? (
         <form action={signOutNav}>
-          <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5] mr-10 ml-10">
+          <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5] mr-10 ml-10 hover:border hover:border-b-[#024873]">
             Sign Out
           </button>
         </form>
       ) : (
         <Link href="/login">
-          <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5] mr-10 ml-10">
+          <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5] mr-10 ml-10 hover:border hover:border-b-[#024873]">
             Ingresar
           </button>
         </Link>

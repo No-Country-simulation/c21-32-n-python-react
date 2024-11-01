@@ -33,7 +33,7 @@ export default function Highlighted() {
           </div>
         </div>
         <Image
-          className="m-auto max-h-[396px] rounded-lg"
+          className="m-auto max-h-[396px] rounded-lg border border-black"
           alt="Welcome image"
           src="/images/Firulais.jpg"
           width={430}
