@@ -80,6 +80,7 @@ export const getUserFromDb = async (token) => {
 
 export const createRefuge = async (refuge) => {
   try {
+    
     const response = await fetch(
       "http://127.0.0.1:8000/api/v1/refugio/refugio/",
       {
@@ -87,10 +88,12 @@ export const createRefuge = async (refuge) => {
         body: refuge,
       }
     );
+    const jsonResponse = await response.json()
+    console.log("Error Creating refuge: ", jsonResponse);
 
     return response;
   } catch (error) {
-    //console.log("Error Creating refuge: ", error);
+    console.log("Error Creating refuge: ", error);
     return null;
   }
 };

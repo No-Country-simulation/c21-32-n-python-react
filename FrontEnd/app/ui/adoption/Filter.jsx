@@ -28,8 +28,8 @@ const Filter = () => {
         <option value="" defaultChecked>
           Selecciona un tipo de mascota
         </option>
-        <option value="1">Perro</option>
-        <option value="2">Gato</option>
+        <option value="1">Gato</option>
+        <option value="2">Perro</option>        
         {/* Agrega más opciones según sea necesario */}
       </select>
     </div>

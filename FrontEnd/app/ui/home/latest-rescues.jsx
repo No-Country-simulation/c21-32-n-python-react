@@ -13,7 +13,7 @@ export default function LatestRescues() {
     },
     {
       id: "2",
-      imageSrc: "/images/dot01.jpg",
+      imageSrc: "/images/dog01.jpeg",
       date: "02 de febrero de 2023",
       title: "Rex",
       description: "Rex es un robusto labrador retriever de 4 años con un corazón amable y leal. Es inteligente y disfruta aprender nuevos trucos.",
@@ -21,7 +21,7 @@ export default function LatestRescues() {
     },
     {
       id: "3",
-      imageSrc: "/images/cat02.jpg",
+      imageSrc: "/images/cat02.jpeg",
       date: "03 de marzo de 2023",
       title: "Simba",
       description: "Simba es un gato tabby de 2 años con una personalidad curiosa y juguetona. Siempre explorando y buscando aventuras.",

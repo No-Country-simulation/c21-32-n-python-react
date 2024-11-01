@@ -9,7 +9,7 @@ export default async function NavigationBar() {
   const isAdmin = session?.user?.isAdmin;
 
   return (
-    <div className="relative flex items-center justify-between bg-[#024873] w-screen h-24">
+    <div className="relative flex items-center justify-between bg-[#024873] w-auto h-24">
       <div className="z-10 flex items-center mr-auto mx-8">
         <Link href="/">
           <Image

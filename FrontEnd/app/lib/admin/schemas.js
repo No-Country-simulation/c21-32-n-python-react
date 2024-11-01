@@ -10,7 +10,7 @@ export const petCreateSchema = object({
   descripcion: string({ required_error: "Descripcion es requerido" }).min(
     1,
     "Descripcion no puede estar vacio"
-  ),
+  ).max(100),
   raza: string().max(20),
   peso: coerce.number().gte(0),
   edad: any().refine(
@@ -76,8 +76,8 @@ export const refugeCreateSchema = object({
   ),
   mision: string({ required_error: "Esta campo no puede estar vacio" })
     .min(1)
-    .max(200),
+    .max(100),
   vision: string({ required_error: "Esta campo no puede estar vacio" })
     .min(1)
-    .max(200),
+    .max(100),
 });

@@ -61,10 +61,10 @@ function PetsCreateForm({ refuges }) {
           name="tipo"
           className="mt-1 block w-1/3 rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         >
-          <option value="1" selected>
+          <option value="1">Gato</option>
+          <option value="2" selected>
             Perro
-          </option>
-          <option value="2">Gato</option>
+          </option>          
         </select>
         {submitErrors?.errors.tipo && (
           <span className="text-sm text-red-500">
@@ -273,10 +273,7 @@ function PetsCreateForm({ refuges }) {
         <label htmlFor="id_refugio" className="pr-4">
           Refugio:
         </label>
-        <select name="id_refugio">
-          <option value={`${refuges?.id}`} selected>
-            {refuges?.[0]?.name}
-          </option>
+        <select name="id_refugio">        
           {refuges?.map((refuge) => {
             return (
               <option key={refuge.id} value={`${refuge.id}`}>

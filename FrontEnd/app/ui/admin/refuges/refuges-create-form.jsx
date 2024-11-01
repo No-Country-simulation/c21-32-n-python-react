@@ -164,6 +164,40 @@ export default function RefugesCreateForm() {
         )}
       </div>
 
+      <div className="flex flex-col">
+        <label htmlFor="mision" className="text-gray-700 font-medium">
+          Mision:
+        </label>
+        <textarea
+          id="mision"
+          name="mision"
+          className="border border-gray-700 w-1/2 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          rows="4"
+        />
+        {submitErrors?.errors?.mision && (
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.mision}
+          </span>
+        )}
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="vision" className="text-gray-700 font-medium">
+          Vision:
+        </label>
+        <textarea
+          id="vision"
+          name="vision"
+          className="border border-gray-700 w-1/2 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          rows="4"
+        />
+        {submitErrors?.errors?.vision && (
+          <span className="text-sm text-red-600">
+            {submitErrors.errors.vision}
+          </span>
+        )}
+      </div>
+
       <div className="flex justify-center items-center mt-5 mb-7">
         <button
           type="submit"

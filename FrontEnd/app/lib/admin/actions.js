@@ -46,7 +46,7 @@ export const createRefugeAction = async (formData) => {
   try {
     const resp = await createRefuge(formData);
     if (resp?.status === 201) {
-      revalidatePath("/admin/dashboard/refuges");
+      revalidatePath("/admin/dashboard/pets");
       return { success: true, errors: {} };
     }
   } catch (error) {
