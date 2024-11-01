@@ -8,6 +8,7 @@ export default function Highlighted() {
       
       <div className="flex justify-between h-full">      
         <div className="m-auto">
+
         <h1 className="font-bold text-5xl mb-7 text-center text-[#0e4a67] m-auto">Mascota Destacada</h1>
           <div className="flex gap-4 h-8">
             <h4 className="font-semibold text-2xl">Nombre: Boby</h4>            
@@ -18,7 +19,9 @@ export default function Highlighted() {
             </h4>
           </div>
           <p className="font-normal mb-20 text-[#545454]">
-            Boby es un perro de raza mixta. Es un perro pequeño <br></br> y tiene pelaje de mezcla de colores (marrón, blanco y negro).<br></br> Es un perro muy bonito y muy amable.
+            Boby es un perro de raza mixta. Es un perro pequeño <br></br> y
+            tiene pelaje de mezcla de colores (marrón, blanco y negro).<br></br>{" "}
+            Es un perro muy bonito y muy amable.
           </p>
           <div className="flex justify-center">
             {/* TODO: recibir id para el detalle*/}
@@ -32,7 +35,7 @@ export default function Highlighted() {
         <Image
           className="m-auto max-h-[396px] rounded-lg"
           alt="Welcome image"
-          src="/images/firulais.jpg"
+          src="/images/Firulais.jpg"
           width={430}
           height={396}
         />
