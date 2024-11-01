@@ -44,18 +44,15 @@ export default async function NavigationBar() {
         <Link href="/#contact">
           <p className="font-semibold text-gray-50">Contacto</p>
         </Link>
-        <Link href="/admin/dashboard">
-          <p className="font-semibold text-gray-50">Solicitudes</p>
-        </Link>
         {isAdmin && (
-          <Link href="/users/pets">
-            <p className="font-semibold text-base">Mascotas</p>
+          <Link href="/admin/dashboard">
+            <p className="font-semibold text-gray-50">Solicitudes</p>
           </Link>
         )}
       </div>
       {session?.user ? (
         <form action={signOutNav}>
-          <button className="mr-4">Sign Out</button>
+          <button className="mx-4">Sign Out</button>
         </form>
       ) : (
         <Link href="/login">
