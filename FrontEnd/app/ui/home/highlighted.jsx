@@ -26,7 +26,7 @@ export default function Highlighted() {
           <div className="flex justify-center">
             {/* TODO: recibir id para el detalle*/}
             <Link href="/adoption/pet/1">
-              <button className="rounded-md w-28 h-10 bg-gradient-to-l from-red-500 to-orange-500 bg-bgButton text-white font-semibold text-lg">
+              <button className="rounded-md w-28 h-10 bg-gradient-to-l from-red-500 to-orange-500 bg-bgButton text-white font-semibold text-lg hover:outline hover:outline-offset-1 hover:outline-[#024873]">
                 Adoptar
               </button>
             </Link>
