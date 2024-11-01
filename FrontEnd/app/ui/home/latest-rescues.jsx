@@ -5,7 +5,7 @@ export default function LatestRescues() {
   const lastestRescues = [
     {
       id: "1",
-      imageSrc: "/images/cat01.jpg",
+      imageSrc: "/images/cat01-2.jpeg",
       date: "01 de enero de 2023",
       title: "Mia",
       description: "Mia es una encantadora gata, con su pelaje elegante y sus ojos hipnotizantes, es la compañera perfecta para cualquier hogar.",
@@ -38,7 +38,7 @@ export default function LatestRescues() {
   ];
   return (
     <section id="latest-rescues" className="h-[630px] w-full">
-      <div className="flex justify-center gap-x-4 h-full w-full">
+      <div className="flex justify-center gap-x-4 h-full w-full">      
         {lastestRescues.map((card, i) => {
           return (
             <div key={card.id + i} className="w-[255px] h-[400px] my-auto">

@@ -264,13 +264,13 @@ function PetsCreateForm({ refuges }) {
       <div>
         <label htmlFor="id_refugio" className="pr-4">Refugio:</label>
         <select name="id_refugio">
-          <option value={`${refuges?.[0]?.id}`} selected>
+          <option value={`${refuges?.id}`} selected>
             {refuges?.[0]?.name}
           </option>
           {refuges?.map((refuge) => {
             return (
               <option key={refuge.id} value={`${refuge.id}`}>
-                {refuge?.name}
+                {refuge.name}
               </option>
             );
           })}

@@ -43,20 +43,6 @@ export default function LoginPage() {
           >
             <button type="submit">Signin with Google</button>
           </form> */}
-      <div>
-        <Image
-          alt="cat"
-          src="/images/cat.png"
-          width={400}
-          height={300}
-          style={{
-            position: "absolute",
-            bottom: "0",
-            right: "0",
-          }}
-          className="lg:h-80 lg:w-60 md:h-50 md:w-40"
-        />
-      </div>
     </div>
   </div>
 </div>

@@ -10,15 +10,19 @@ async function CardDetailContainer({ params }) {
   const pet = await data.json();
   // Aquí se carga los detalles de la tarjeta según el ID
   const cardDetails = {
-    imageSrc: pet.img_home_principal, // Ajusta la ruta según las imágenes
+    imageSrc: pet.img_print_mascota, // Ajusta la ruta según las imágenes
     date: pet.fecha_refugio,
     title: pet.nombre,
     description: pet.descripcion,
+    edad:pet.edad,
+    peso:pet.peso,
+    raza:pet.raza,
+    sexo:pet.Sexo
   };
 
   // Imágenes de la galería
   const galleryImages = [
-    pet.img_print_mascota,
+    pet.img_home_principal,
     // Agrega más imágenes según sea necesario
   ];
 
@@ -30,6 +34,11 @@ async function CardDetailContainer({ params }) {
           date={cardDetails.date}
           title={cardDetails.title}
           description={cardDetails.description}
+          edad={cardDetails.edad}
+          peso={cardDetails.peso}
+          raza={cardDetails.raza}
+          sexo={cardDetails.sexo}
+
         />
       </div>
       <ImageGallery images={galleryImages} />

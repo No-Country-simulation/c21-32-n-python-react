@@ -21,7 +21,7 @@ class Mascota(models.Model):
     id_mascota = models.AutoField(primary_key=True)  # Llave primaria personalizada
     nombre = models.CharField(max_length=45)
     tipo = models.PositiveSmallIntegerField(choices=Type.choices,default=Type.CAT)
-    descripcion = models.TextField(max_length=100)
+    descripcion = models.TextField(max_length=200)
     raza = models.CharField(max_length=45)
     peso = models.DecimalField(max_digits=5, decimal_places=2)
     edad = models.IntegerField()
@@ -33,11 +33,10 @@ class Mascota(models.Model):
     fecha_refugio = models.DateField(default=datetime.today)
     #falta aplicar FK 
     id_refugio = models.ForeignKey(Refugio, on_delete=models.CASCADE)
-    
-    
+        
     #permite guardar dependiendo del id y el nombre de la nueva mascota 
     def __str__(self):
-        return f"Mascota {self.id_mascota}: {self.nombre}"
+        return f"Imagen de {self.id_mascota}: {self.title}"
     
 class ImagenesMascota(models.Model):
     title = models.CharField(max_length=100)

@@ -9,7 +9,7 @@ const Testimonials = () => {
       quote: '“Estamos muy contentos con la adopcion del gato manchitas, nos lleno la casa de alegria.”',
       author: 'Armando Bustamante',
       title: 'Obrero',
-      image: './images/user1.jpg'
+      image: './images/user01.jpg'
     },
     {
       quote: '“Hemos adoptado un perro hace unos dias y realmente no sabiamos lo importante que era para nuestros hijos, gracias”',
@@ -46,6 +46,7 @@ const Testimonials = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
       <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/1 ring-4 ring-orange-300 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
+      <p className="font-bold text-5xl mb-7 text-center text-[#0e4a67]">Testimonios</p>
         <figure className="mt-10">
           <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
             <p>{currentTestimonial.quote}</p>
@@ -54,7 +55,7 @@ const Testimonials = () => {
             <img
               alt=""
               src={currentTestimonial.image}
-              className="mx-auto h-24 w-24 rounded-full"
+              className="mx-auto h-32 w-32 rounded-full"
             />
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
               <div className="font-semibold text-gray-900">{currentTestimonial.author}</div>

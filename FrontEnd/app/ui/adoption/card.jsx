@@ -18,7 +18,7 @@ const Card = ({ imageSrc, date, title, description, id }) => {
         <h2 className="text-lg font-semibold mb-2">{title}</h2>
         <p className="text-gray-700 mb-4 flex-grow">{description}</p> 
         <Link href={`/adoption/pet/${id}`}> 
-          <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg"> 
+          <button className="rounded-md w-28 h-10 bg-bgButton bg-gradient-to-l from-red-500 to-orange-500 text-white font-semibold text-lg"> 
             Ver más
           </button>
         </Link>

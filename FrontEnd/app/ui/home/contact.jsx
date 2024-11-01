@@ -10,28 +10,18 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="h-[613px] w-full">
-      <h1 className="font-bold text-4xl text-center mt-8">CONTACTO</h1>
-      <div className="flex justify-between items-center">
-        {/* <Image
-          className="max-h-[275px] min-h-[275px]"
-          alt="mapa"
-          width={275}
-          height={275}
-          src="/images/rectangle.png"
-        /> */}
+    <section id="contact" className="h-[400px] w-full">
+      <h1 className="font-bold text-4xl text-center mt-8">Contactos</h1>
+      <div className="flex justify-items-center items-center">
+        <div className="w-1/2">
         <MapLocation />
-        <div>
+        </div>
+        
+        <div className="w-1/2 m-auto">
           {info.map((value, i) => {
             return <IconText key={i} {...value} />;
           })}
         </div>
-        <Image
-          className="min-h-[450px] max-h-[450px] max-w-[372]"
-          width={372}
-          height={450}
-          src="/images/cat.png"
-        />
       </div>
     </section>
   );
@@ -39,7 +29,7 @@ export default function Contact() {
 
 const IconText = ({ iconSrc, content }) => {
   return (
-    <div className="flex gap-4 w-52 mb-4 h-fit">
+    <div className="flex gap-4 w-52 m-auto h-fit">
       <Image src={`${iconSrc}`} alt="Icono asociado" width={24} height={24} />
       <p> {content}</p>
     </div>

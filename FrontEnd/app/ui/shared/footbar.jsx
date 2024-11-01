@@ -6,7 +6,7 @@ export default function Footbar() {
   return (
     <section
       id="footbar"
-      className="w-full h-[223px] bg-[#024873] flex justify-center items-center" // Aquí se centra el contenido horizontal y verticalmente
+      className="w-full h-[160px] bg-[#024873] flex justify-center items-center" // Aquí se centra el contenido horizontal y verticalmente
     >
       <div className="flex items-center gap-16"> {/* Espacio entre elementos */}
         <div className="flex items-center mr-16">
@@ -24,7 +24,7 @@ export default function Footbar() {
         <div className="flex flex-col items-center"> {/* Centrado verticalmente */}
           <FootbarLinks />
           <p className="font-normal text-sm text-slate-300 text-center">
-            © Copyright 2024 xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            © Copyright 2024 Derechos Reservados
           </p>
         </div>
         <SocialLinks />
@@ -51,33 +51,33 @@ const SocialLinks = () => {
       <Link href="https://www.facebook.com/">
         <Image
           alt="Facebook icon"
-          src="/icons/facebook-icon.png"
-          width={24}
-          height={24}
+          src="/icons/facebook-icon00.png"
+          width={32}
+          height={32}
         />
       </Link>
       <Link href="https://www.instagram.com/" width={24} height={24}>
         <Image
           alt="Facebook icon"
-          src="/icons/instagram-icon.png"
-          width={24}
-          height={24}
+          src="/icons/instagram-icon00.png"
+          width={32}
+          height={32}
         />
       </Link>
       <Link href="https://www.x.com/" width={24} height={24}>
         <Image
           alt="Facebook icon"
-          src="/icons/twitter-icon.png"
-          width={24}
-          height={24}
+          src="/icons/twitter-icon00.png"
+          width={32}
+          height={32}
         />
       </Link>
       <Link href="https://www.youtube.com/" width={24} height={24}>
         <Image
           alt="Facebook icon"
-          src="/icons/youtube-icon.png"
-          width={24}
-          height={24}
+          src="/icons/youtube-icon00.png"
+          width={32}
+          height={32}
         />
       </Link>
     </div>

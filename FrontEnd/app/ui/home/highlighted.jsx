@@ -5,28 +5,14 @@ import React from "react";
 export default function Highlighted() {
   return (
     <section id="highlighted" className="w-full h-[614px]">
-      <div className="flex justify-between h-full">
+      
+      <div className="flex justify-between h-full">      
         <div className="m-auto">
-          <div className="flex gap-4 h-8 mb-20">
-            <Image
-              className="m-auto max-h-8"
-              alt="star image"
-              src="/images/circle.png"
-              width={16}
-              height={16}
-            />
-            <h4 className="font-semibold text-2xl w-[400px]">
-              Nombre: Boby
-            </h4>
+        <h1 className="font-bold text-5xl mb-7 text-center text-[#0e4a67] m-auto">Mascota Destacada</h1>
+          <div className="flex gap-4 h-8">
+            <h4 className="font-semibold text-2xl">Nombre: Boby</h4>            
           </div>
           <div className="flex gap-4 h-8">
-            <Image
-              className="m-auto max-h-8"
-              alt="star image"
-              src="/images/circle.png"
-              width={16}
-              height={16}
-            />
             <h4 className="font-semibold text-2xl w-[400px]">
               Caracteristicas
             </h4>
@@ -37,14 +23,14 @@ export default function Highlighted() {
           <div className="flex justify-center">
             {/* TODO: recibir id para el detalle*/}
             <Link href="/adoption/pet/1">
-              <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+              <button className="rounded-md w-28 h-10 bg-gradient-to-l from-red-500 to-orange-500 bg-bgButton text-white font-semibold text-lg">
                 Adoptar
               </button>
             </Link>
           </div>
         </div>
         <Image
-          className="m-auto max-h-[396px]"
+          className="m-auto max-h-[396px] rounded-lg"
           alt="Welcome image"
           src="/images/firulais.jpg"
           width={430}

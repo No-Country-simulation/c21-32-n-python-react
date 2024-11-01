@@ -7,7 +7,7 @@ export default function HelpUs() {
     <section id="help-us" className="h-[670px] w-full relative">
       <div className="flex justify-between h-full">
         <Image
-          className="m-auto max-h-[395px] ml-8 hidden md:block"
+          className="m-auto max-h-[395px] hidden md:block rounded-lg"
           alt="Welcome image"
           src="/images/help.jpg"
           width={519}
@@ -21,19 +21,12 @@ export default function HelpUs() {
           <span className="font-bold text-black">Gracias por apoyar nuestra causa</span> y apoyar Nuestro Refugio. Juntos, podemos cambiar vidas y crear un futuro mejor para todos nuestros amigos de cuatro patas.
           </p>
           <Link href="/donations">
-            <button className="rounded-md w-28 h-10 bg-bgButton text-white font-semibold text-lg">
+            <button className="rounded-md w-28 h-10 bg-bgButton bg-gradient-to-l from-red-500 to-orange-500 text-white font-semibold text-lg">
               Donar
             </button>
           </Link>
         </div>
       </div>
-      <Image
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 hidden md:block"
-        alt="Logo de Perrito"
-        src={"/images/dog.png"}
-        height={172}
-        width={248}
-      />
     </section>
   );
 }
