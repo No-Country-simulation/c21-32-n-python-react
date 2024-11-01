@@ -29,7 +29,7 @@ export default function LatestRescues() {
     },
     {
       id: "4",
-      imageSrc: "/images/dot02.jpg",
+      imageSrc: "/images/dog02.png",
       date: "04 de abril de 2023",
       title: "Luna",
       description: "Luna es una golden retriever de 3 años con un pelaje dorado brillante y una personalidad cariñosa. Es muy sociable y adora la compañía.",
