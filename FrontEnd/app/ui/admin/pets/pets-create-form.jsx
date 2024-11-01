@@ -62,9 +62,9 @@ function PetsCreateForm({ refuges }) {
           className="mt-1 block w-1/3 rounded-md border border-gray-700 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         >
           <option value="1" selected>
-            Perro
+            Gato
           </option>
-          <option value="2">Gato</option>
+          <option value="2">Perro</option>
         </select>
         {submitErrors?.errors.tipo && (
           <span className="text-sm text-red-500">
