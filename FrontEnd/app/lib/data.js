@@ -10,24 +10,24 @@ export async function fetchRequestsFiltered(query, currentPage) {
         status: "aprovada",
       },
       {
-        name: "Juan",
-        lastName: "Perez",
+        name: "Gaby",
+        lastName: "Lopez",
         email: "juan.perez@gmail.com",
-        date: "13-05-2024",
+        date: "10-02-2024",
         status: "denegada",
       },
       {
-        name: "Juan",
-        lastName: "Perez",
+        name: "Mariana",
+        lastName: "Saenz",
         email: "juan.perez@gmail.com",
-        date: "13-05-2024",
+        date: "21-11-2024",
         status: "denegada",
       },
       {
-        name: "Juan",
-        lastName: "Perez",
+        name: "Ale",
+        lastName: "Gomez",
         email: "juan.perez@gmail.com",
-        date: "13-05-2024",
+        date: "01-12-2023",
         status: "aprovada",
       },
     ];
@@ -36,6 +36,43 @@ export async function fetchRequestsFiltered(query, currentPage) {
     //Call Api using query and offset
     //Get Requests
     return { requests, totalPages };
+  } catch (error) {}
+}
+
+export async function fetchUsers() {
+  try {
+    let users = [
+      {
+        name: "Juan",
+        lastName: "Perez",
+        email: "juan.perez@gmail.com",
+        refugio: "Creando Hogares",
+        role: "admin",
+      },
+      {
+        name: "Carlos",
+        lastName: "Lopez",
+        email: "clopez@gmail.com",
+        refugio: "Buscando peludos",
+        role: "member",
+      },
+      {
+        name: "Maria",
+        lastName: "Luisa",
+        email: "luisa123@gmail.com",
+        refugio: "Hogar Perruno",
+        role: "admin",
+      },
+      {
+        name: "Jorge",
+        lastName: "Sanchez",
+        email: "s.jorge@gmail.com",
+        refugio: "Patitas de ayuda",
+        role: "member",
+      },
+    ];
+
+    return users;
   } catch (error) {}
 }
 
@@ -80,7 +117,6 @@ export const getUserFromDb = async (token) => {
 
 export const createRefuge = async (refuge) => {
   try {
-    
     const response = await fetch(
       "http://127.0.0.1:8000/api/v1/refugio/refugio/",
       {
@@ -88,7 +124,7 @@ export const createRefuge = async (refuge) => {
         body: refuge,
       }
     );
-    const jsonResponse = await response.json()
+    const jsonResponse = await response.json();
     console.log("Error Creating refuge: ", jsonResponse);
 
     return response;
