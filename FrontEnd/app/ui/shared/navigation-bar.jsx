@@ -52,7 +52,9 @@ export default async function NavigationBar() {
       </div>
       {session?.user ? (
         <form action={signOutNav}>
-          <button className="mx-4">Sign Out</button>
+          <button className="rounded-md w-28 h-10 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#faa16e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24AFB5] mr-10 ml-10">
+            Sign Out
+          </button>
         </form>
       ) : (
         <Link href="/login">
