@@ -43,8 +43,8 @@ export async function fetchUsers() {
   try {
     let users = [
       {
-        name: "Juan",
-        lastName: "Perez",
+        name: "Ernesto",
+        lastName: "Caceres",
         email: "juan.perez@gmail.com",
         refugio: "Creando Hogares",
         role: "admin",
