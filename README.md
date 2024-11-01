@@ -62,12 +62,8 @@ Crear una plataforma que permita publicar información del refugio, registrar ma
 |---------------------------|----------------------------------|-----------------------------------------------|---------------------------------------------|
 | Armando García            | Project Manager, Backend Dev    | [LinkedIn](https://www.linkedin.com/in/armando-garcía) | [GitHub](https://github.com/armando) |
 | María Laura Rivera        | UX/UI Designer                   | [LinkedIn](https://www.linkedin.com/in/marialaurariverasanchez?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ) | [GitHub](https://github.com/marialaura) |
-| Betsy Nohe Guitian        | Frontend Developer               | [LinkedIn](https://www.linkedin.com/in/betsy-nohe) | [GitHub](https://github.com/betsy) |
-| Diógenes Martínez         | Frontend Developer               | [LinkedIn](https://www.linkedin.com/in/diogenes-martinez) | [GitHub](https://github.com/diogenes) |
-| Luis Miguel Montañez      | Frontend Developer               | [LinkedIn](https://www.linkedin.com/in/luis-miguel-montanez) | [GitHub](https://github.com/luismiguel) |
+| Diógenes Martínez         | Frontend Developer               | [LinkedIn]([https://www.linkedin.com/in/diogenes-martinez](https://www.linkedin.com/in/diomartinez?trk=contact-info)) | [GitHub]( https://github.com/Diogenesmart/) |
 | Rassiel Mex               | Frontend Developer               | [LinkedIn](https://www.linkedin.com/in/rassielmex) | [GitHub](https://github.com/RassielMex) |
-| María Ester Tarifa Arena  | Backend Developer                | [LinkedIn](https://www.linkedin.com/in/maria-ester-tarifa) | [GitHub](https://github.com/mariaester) |
-| Mariana Bañuelos          | Backend Developer                | [LinkedIn](https://www.linkedin.com/in/mariana-bañuelos) | [GitHub](https://github.com/mariana) |
 | Emily Rodríguez           | Backend Developer               | [LinkedIn](https://www.linkedin.com/in/emily-rodríguez-) | [GitHub](https://github.com/emily123) |
 | Santiago Rodríguez        | Backend Developer               | [LinkedIn](https://www.linkedin.com/in/santiago-rodríguez) | [GitHub](https://github.com/santiago) |
 
