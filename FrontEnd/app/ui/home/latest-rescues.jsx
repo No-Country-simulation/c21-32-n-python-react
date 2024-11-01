@@ -37,16 +37,19 @@ export default function LatestRescues() {
     },
   ];
   return (
-    <section id="latest-rescues" className="h-[630px] w-full">
-      <div className="flex justify-center gap-x-4 h-full w-full">      
-        {lastestRescues.map((card, i) => {
-          return (
-            <div key={card.id + i} className="w-[255px] h-[400px] my-auto">
-              <Card key={card.id} {...card} />
-            </div>
-          );
-        })}
+    <section id="latest-rescues" className="h-screen w-full">
+      <div className="flex justify-center items-center">
+        <h1 className="font-bold text-5xl text-[#0e4a67] mb-8 mt-12">Mascotas rescatadas</h1>
       </div>
+        <div className="flex justify-center gap-x-4 h-full w-full ">
+          {lastestRescues.map((card, i) => {
+            return (
+              <div key={card.id + i} className="w-[255px] h-[400px]">
+                <Card key={card.id} {...card} />
+              </div>
+            );
+          })}
+        </div>
     </section>
   );
 }
