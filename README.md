@@ -60,7 +60,7 @@ Crear una plataforma que permita publicar información del refugio, registrar ma
 
 | **Nombre**                | **Rol**                          | **LinkedIn**                                   | **GitHub**                                   |
 |---------------------------|----------------------------------|-----------------------------------------------|---------------------------------------------|
-| Armando García            | Project Manager, Backend Dev    | [LinkedIn](https://www.linkedin.com/in/armando-garcía) | [GitHub](https://github.com/armando) |
+| Armando García            | Project Manager, Backend Dev    | [LinkedIn](https://www.linkedin.com/in/armando-garcia-96657b4b/) | [GitHub](https://github.com/arjegalu) |
 | María Laura Rivera        | UX/UI Designer                   | [LinkedIn](https://www.linkedin.com/in/marialaurariverasanchez?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ) | [GitHub](https://github.com/marialaura) |
 | Betsy Nohe Guitian        | Frontend Developer               | [LinkedIn](https://www.linkedin.com/) | [GitHub]( https://github.com) |
 | Diógenes Martínez         | Frontend Developer               | [LinkedIn](https://www.linkedin.com/in/diomartinez?trk=contact-info) | [GitHub]( https://github.com/Diogenesmart/) |
